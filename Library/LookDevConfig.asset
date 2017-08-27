@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 13602, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LookDevContexts:
+  - m_Properties:
+    - floatValue: 0
+      intValue: 0
+    - floatValue: 0
+      intValue: 0
+    - floatValue: 0
+      intValue: 11
+    - floatValue: 0
+      intValue: 0
+    - floatValue: 0
+      intValue: -1
+  - m_Properties:
+    - floatValue: 0
+      intValue: 0
+    - floatValue: 0
+      intValue: 0
+    - floatValue: 0
+      intValue: -1
+    - floatValue: 20.722422
+      intValue: 0
+    - floatValue: 0
+      intValue: -1
+  m_LookDevProperties:
+  - m_Linked: 0
+    m_PropertyType: 1
+  - m_Linked: 1
+    m_PropertyType: 0
+  - m_Linked: 0
+    m_PropertyType: 0
+  - m_Linked: 0
+    m_PropertyType: 1
+  - m_Linked: 0
+    m_PropertyType: 0
+  m_Gizmo:
+    m_Point1: {x: 0.000000008742278, y: 0.2}
+    m_Point2: {x: 0.11851853, y: -0.07592594}
+    m_Center: {x: 0.05925927, y: 0.062037032}
+    m_Angle: 5.8774843
+    m_Length: 0.15015139
+    m_Plane: {x: -0.918826, y: -0.39466295, z: 0.07893267, w: -0}
+    m_PlaneOrtho: {x: -0.39466292, y: 0.9188259, z: -0.033613797, w: 0}
+  m_LookDevMode: 0
+  m_EnableToneMap: 1
+  m_EnableShadowCubemap: 0
+  m_ExposureRange: 8
+  m_ShadowDistance: 0
+  m_ShowBalls: 0
+  m_ShowControlWindows: 1
+  m_RotateObjectMode: 0
+  m_EnvRotationSpeed: 1
+  m_RotateEnvMode: 0
+  m_ObjRotationSpeed: 1
+  m_AllowDifferentObjects: 0
+  m_CurrentObject:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_PreviewObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_CurrentContextEdition: 0
+  m_CurrentEditionContextIndex: 0
+  m_DualViewBlendFactor: 0
+  m_OriginalGameObject:
+  - {fileID: 100010, guid: c672f422607fdaf4c89fb1a457386792, type: 3}
+  - {fileID: 100010, guid: c672f422607fdaf4c89fb1a457386792, type: 3}
+  m_CameraState:
+  - m_Pivot:
+      m_Target: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+      speed: 2
+      m_Value: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+    m_Rotation:
+      m_Target: {x: 0.045252927, y: -0.85044616, z: 0.074176185, w: 0.51883787}
+      speed: 2
+      m_Value: {x: 0.045252927, y: -0.8504461, z: 0.074176185, w: 0.51883787}
+    m_ViewSize:
+      m_Target: 15.446238
+      speed: 2
+      m_Value: 15.446238
+  - m_Pivot:
+      m_Target: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+      speed: 2
+      m_Value: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+    m_Rotation:
+      m_Target: {x: 0, y: 0, z: 0, w: 1}
+      speed: 2
+      m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_ViewSize:
+      m_Target: 15.446238
+      speed: 2
+      m_Value: 15.446238
+  m_SideBySideCameraLinked: 0
+  m_CameraStateCommon:
+    m_Pivot:
+      m_Target: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+      speed: 2
+      m_Value: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+    m_Rotation:
+      m_Target: {x: 0, y: 0, z: 0, w: 1}
+      speed: 2
+      m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_ViewSize:
+      m_Target: 15.446238
+      speed: 2
+      m_Value: 15.446238
+  m_CameraStateLeft:
+    m_Pivot:
+      m_Target: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+      speed: 2
+      m_Value: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+    m_Rotation:
+      m_Target: {x: 0.045252927, y: -0.85044616, z: 0.074176185, w: 0.51883787}
+      speed: 2
+      m_Value: {x: 0.045252927, y: -0.8504461, z: 0.074176185, w: 0.51883787}
+    m_ViewSize:
+      m_Target: 15.446238
+      speed: 2
+      m_Value: 15.446238
+  m_CameraStateRight:
+    m_Pivot:
+      m_Target: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+      speed: 2
+      m_Value: {x: -2.820825, y: -0.58835685, z: -0.0018219054}
+    m_Rotation:
+      m_Target: {x: 0, y: 0, z: 0, w: 1}
+      speed: 2
+      m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_ViewSize:
+      m_Target: 15.446238
+      speed: 2
+      m_Value: 15.446238

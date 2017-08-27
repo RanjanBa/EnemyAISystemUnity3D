@@ -1,0 +1,1387 @@
+fileFormatVersion: 2
+guid: 8eea7b265320b491bafb2487396d2519
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SciFi:Alpha:Head
+    100004: SciFi:Alpha:HeadTop_End
+    100006: SciFi:Alpha:Hips
+    100008: SciFi:Alpha:LeftArm
+    100010: SciFi:Alpha:LeftFoot
+    100012: SciFi:Alpha:LeftFootToeBase_End
+    100014: SciFi:Alpha:LeftForeArm
+    100016: SciFi:Alpha:LeftHand
+    100018: SciFi:Alpha:LeftHandIndex1
+    100020: SciFi:Alpha:LeftHandIndex2
+    100022: SciFi:Alpha:LeftHandIndex3
+    100024: SciFi:Alpha:LeftHandIndex4
+    100026: SciFi:Alpha:LeftHandIndex5
+    100028: SciFi:Alpha:LeftHandMiddle1
+    100030: SciFi:Alpha:LeftHandMiddle2
+    100032: SciFi:Alpha:LeftHandMiddle3
+    100034: SciFi:Alpha:LeftHandMiddle4
+    100036: SciFi:Alpha:LeftHandMiddle5
+    100038: SciFi:Alpha:LeftHandPinky1
+    100040: SciFi:Alpha:LeftHandPinky2
+    100042: SciFi:Alpha:LeftHandPinky3
+    100044: SciFi:Alpha:LeftHandPinky4
+    100046: SciFi:Alpha:LeftHandPinky5
+    100048: SciFi:Alpha:LeftHandRing1
+    100050: SciFi:Alpha:LeftHandRing2
+    100052: SciFi:Alpha:LeftHandRing3
+    100054: SciFi:Alpha:LeftHandRing4
+    100056: SciFi:Alpha:LeftHandRing5
+    100058: SciFi:Alpha:LeftHandThumb1
+    100060: SciFi:Alpha:LeftHandThumb2
+    100062: SciFi:Alpha:LeftHandThumb3
+    100064: SciFi:Alpha:LeftHandThumb4
+    100066: SciFi:Alpha:LeftHandThumb5
+    100068: SciFi:Alpha:LeftLeg
+    100070: SciFi:Alpha:LeftShoulder
+    100072: SciFi:Alpha:LeftToeBase
+    100074: SciFi:Alpha:LeftUpLeg
+    100076: SciFi:Alpha:Neck
+    100078: SciFi:Alpha:Neck1
+    100080: SciFi:Alpha:RightArm
+    100082: SciFi:Alpha:RightFoot
+    100084: SciFi:Alpha:RightFootToeBase_End
+    100086: SciFi:Alpha:RightForeArm
+    100088: SciFi:Alpha:RightHand
+    100090: SciFi:Alpha:RightHandIndex1
+    100092: SciFi:Alpha:RightHandIndex2
+    100094: SciFi:Alpha:RightHandIndex3
+    100096: SciFi:Alpha:RightHandIndex4
+    100098: SciFi:Alpha:RightHandIndex5
+    100100: SciFi:Alpha:RightHandMiddle1
+    100102: SciFi:Alpha:RightHandMiddle2
+    100104: SciFi:Alpha:RightHandMiddle3
+    100106: SciFi:Alpha:RightHandMiddle4
+    100108: SciFi:Alpha:RightHandMiddle5
+    100110: SciFi:Alpha:RightHandPinky1
+    100112: SciFi:Alpha:RightHandPinky2
+    100114: SciFi:Alpha:RightHandPinky3
+    100116: SciFi:Alpha:RightHandPinky4
+    100118: SciFi:Alpha:RightHandPinky5
+    100120: SciFi:Alpha:RightHandRing1
+    100122: SciFi:Alpha:RightHandRing2
+    100124: SciFi:Alpha:RightHandRing3
+    100126: SciFi:Alpha:RightHandRing4
+    100128: SciFi:Alpha:RightHandRing5
+    100130: SciFi:Alpha:RightHandThumb1
+    100132: SciFi:Alpha:RightHandThumb2
+    100134: SciFi:Alpha:RightHandThumb3
+    100136: SciFi:Alpha:RightHandThumb4
+    100138: SciFi:Alpha:RightHandThumb5
+    100140: SciFi:Alpha:RightLeg
+    100142: SciFi:Alpha:RightShoulder
+    100144: SciFi:Alpha:RightToeBase
+    100146: SciFi:Alpha:RightUpLeg
+    100148: SciFi:Alpha:Spine
+    100150: SciFi:Alpha:Spine1
+    100152: SciFi:Alpha:Spine2
+    400000: //RootNode
+    400002: SciFi:Alpha:Head
+    400004: SciFi:Alpha:HeadTop_End
+    400006: SciFi:Alpha:Hips
+    400008: SciFi:Alpha:LeftArm
+    400010: SciFi:Alpha:LeftFoot
+    400012: SciFi:Alpha:LeftFootToeBase_End
+    400014: SciFi:Alpha:LeftForeArm
+    400016: SciFi:Alpha:LeftHand
+    400018: SciFi:Alpha:LeftHandIndex1
+    400020: SciFi:Alpha:LeftHandIndex2
+    400022: SciFi:Alpha:LeftHandIndex3
+    400024: SciFi:Alpha:LeftHandIndex4
+    400026: SciFi:Alpha:LeftHandIndex5
+    400028: SciFi:Alpha:LeftHandMiddle1
+    400030: SciFi:Alpha:LeftHandMiddle2
+    400032: SciFi:Alpha:LeftHandMiddle3
+    400034: SciFi:Alpha:LeftHandMiddle4
+    400036: SciFi:Alpha:LeftHandMiddle5
+    400038: SciFi:Alpha:LeftHandPinky1
+    400040: SciFi:Alpha:LeftHandPinky2
+    400042: SciFi:Alpha:LeftHandPinky3
+    400044: SciFi:Alpha:LeftHandPinky4
+    400046: SciFi:Alpha:LeftHandPinky5
+    400048: SciFi:Alpha:LeftHandRing1
+    400050: SciFi:Alpha:LeftHandRing2
+    400052: SciFi:Alpha:LeftHandRing3
+    400054: SciFi:Alpha:LeftHandRing4
+    400056: SciFi:Alpha:LeftHandRing5
+    400058: SciFi:Alpha:LeftHandThumb1
+    400060: SciFi:Alpha:LeftHandThumb2
+    400062: SciFi:Alpha:LeftHandThumb3
+    400064: SciFi:Alpha:LeftHandThumb4
+    400066: SciFi:Alpha:LeftHandThumb5
+    400068: SciFi:Alpha:LeftLeg
+    400070: SciFi:Alpha:LeftShoulder
+    400072: SciFi:Alpha:LeftToeBase
+    400074: SciFi:Alpha:LeftUpLeg
+    400076: SciFi:Alpha:Neck
+    400078: SciFi:Alpha:Neck1
+    400080: SciFi:Alpha:RightArm
+    400082: SciFi:Alpha:RightFoot
+    400084: SciFi:Alpha:RightFootToeBase_End
+    400086: SciFi:Alpha:RightForeArm
+    400088: SciFi:Alpha:RightHand
+    400090: SciFi:Alpha:RightHandIndex1
+    400092: SciFi:Alpha:RightHandIndex2
+    400094: SciFi:Alpha:RightHandIndex3
+    400096: SciFi:Alpha:RightHandIndex4
+    400098: SciFi:Alpha:RightHandIndex5
+    400100: SciFi:Alpha:RightHandMiddle1
+    400102: SciFi:Alpha:RightHandMiddle2
+    400104: SciFi:Alpha:RightHandMiddle3
+    400106: SciFi:Alpha:RightHandMiddle4
+    400108: SciFi:Alpha:RightHandMiddle5
+    400110: SciFi:Alpha:RightHandPinky1
+    400112: SciFi:Alpha:RightHandPinky2
+    400114: SciFi:Alpha:RightHandPinky3
+    400116: SciFi:Alpha:RightHandPinky4
+    400118: SciFi:Alpha:RightHandPinky5
+    400120: SciFi:Alpha:RightHandRing1
+    400122: SciFi:Alpha:RightHandRing2
+    400124: SciFi:Alpha:RightHandRing3
+    400126: SciFi:Alpha:RightHandRing4
+    400128: SciFi:Alpha:RightHandRing5
+    400130: SciFi:Alpha:RightHandThumb1
+    400132: SciFi:Alpha:RightHandThumb2
+    400134: SciFi:Alpha:RightHandThumb3
+    400136: SciFi:Alpha:RightHandThumb4
+    400138: SciFi:Alpha:RightHandThumb5
+    400140: SciFi:Alpha:RightLeg
+    400142: SciFi:Alpha:RightShoulder
+    400144: SciFi:Alpha:RightToeBase
+    400146: SciFi:Alpha:RightUpLeg
+    400148: SciFi:Alpha:Spine
+    400150: SciFi:Alpha:Spine1
+    400152: SciFi:Alpha:Spine2
+    7400000: Walk Backward
+    7400002: Walk Forward
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'SciFi:Alpha:Spine2' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'SciFi:Alpha:Neck1' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk Backward
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 76
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SciFi:Alpha:Hips
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg/SciFi:Alpha:LeftFoot
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg/SciFi:Alpha:LeftFoot/SciFi:Alpha:LeftToeBase
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg/SciFi:Alpha:LeftFoot/SciFi:Alpha:LeftToeBase/SciFi:Alpha:LeftFootToeBase_End
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg/SciFi:Alpha:RightFoot
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg/SciFi:Alpha:RightFoot/SciFi:Alpha:RightToeBase
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg/SciFi:Alpha:RightFoot/SciFi:Alpha:RightToeBase/SciFi:Alpha:RightFootToeBase_End
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2/SciFi:Alpha:LeftHandIndex3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2/SciFi:Alpha:LeftHandIndex3/SciFi:Alpha:LeftHandIndex4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2/SciFi:Alpha:LeftHandIndex3/SciFi:Alpha:LeftHandIndex5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2/SciFi:Alpha:LeftHandMiddle3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2/SciFi:Alpha:LeftHandMiddle3/SciFi:Alpha:LeftHandMiddle4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2/SciFi:Alpha:LeftHandMiddle3/SciFi:Alpha:LeftHandMiddle5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2/SciFi:Alpha:LeftHandPinky3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2/SciFi:Alpha:LeftHandPinky3/SciFi:Alpha:LeftHandPinky4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2/SciFi:Alpha:LeftHandPinky3/SciFi:Alpha:LeftHandPinky5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2/SciFi:Alpha:LeftHandRing3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2/SciFi:Alpha:LeftHandRing3/SciFi:Alpha:LeftHandRing4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2/SciFi:Alpha:LeftHandRing3/SciFi:Alpha:LeftHandRing5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2/SciFi:Alpha:LeftHandThumb3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2/SciFi:Alpha:LeftHandThumb3/SciFi:Alpha:LeftHandThumb4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2/SciFi:Alpha:LeftHandThumb3/SciFi:Alpha:LeftHandThumb5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck/SciFi:Alpha:Neck1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck/SciFi:Alpha:Neck1/SciFi:Alpha:Head
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck/SciFi:Alpha:Neck1/SciFi:Alpha:Head/SciFi:Alpha:HeadTop_End
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2/SciFi:Alpha:RightHandIndex3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2/SciFi:Alpha:RightHandIndex3/SciFi:Alpha:RightHandIndex4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2/SciFi:Alpha:RightHandIndex3/SciFi:Alpha:RightHandIndex5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2/SciFi:Alpha:RightHandMiddle3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2/SciFi:Alpha:RightHandMiddle3/SciFi:Alpha:RightHandMiddle4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2/SciFi:Alpha:RightHandMiddle3/SciFi:Alpha:RightHandMiddle5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2/SciFi:Alpha:RightHandPinky3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2/SciFi:Alpha:RightHandPinky3/SciFi:Alpha:RightHandPinky4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2/SciFi:Alpha:RightHandPinky3/SciFi:Alpha:RightHandPinky5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2/SciFi:Alpha:RightHandRing3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2/SciFi:Alpha:RightHandRing3/SciFi:Alpha:RightHandRing4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2/SciFi:Alpha:RightHandRing3/SciFi:Alpha:RightHandRing5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2/SciFi:Alpha:RightHandThumb3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2/SciFi:Alpha:RightHandThumb3/SciFi:Alpha:RightHandThumb4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2/SciFi:Alpha:RightHandThumb3/SciFi:Alpha:RightHandThumb5
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk Forward
+      takeName: Take 001
+      firstFrame: 77
+      lastFrame: 152
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SciFi:Alpha:Hips
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg/SciFi:Alpha:LeftFoot
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg/SciFi:Alpha:LeftFoot/SciFi:Alpha:LeftToeBase
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:LeftUpLeg/SciFi:Alpha:LeftLeg/SciFi:Alpha:LeftFoot/SciFi:Alpha:LeftToeBase/SciFi:Alpha:LeftFootToeBase_End
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg/SciFi:Alpha:RightFoot
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg/SciFi:Alpha:RightFoot/SciFi:Alpha:RightToeBase
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:RightUpLeg/SciFi:Alpha:RightLeg/SciFi:Alpha:RightFoot/SciFi:Alpha:RightToeBase/SciFi:Alpha:RightFootToeBase_End
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2/SciFi:Alpha:LeftHandIndex3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2/SciFi:Alpha:LeftHandIndex3/SciFi:Alpha:LeftHandIndex4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandIndex1/SciFi:Alpha:LeftHandIndex2/SciFi:Alpha:LeftHandIndex3/SciFi:Alpha:LeftHandIndex5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2/SciFi:Alpha:LeftHandMiddle3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2/SciFi:Alpha:LeftHandMiddle3/SciFi:Alpha:LeftHandMiddle4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandMiddle1/SciFi:Alpha:LeftHandMiddle2/SciFi:Alpha:LeftHandMiddle3/SciFi:Alpha:LeftHandMiddle5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2/SciFi:Alpha:LeftHandPinky3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2/SciFi:Alpha:LeftHandPinky3/SciFi:Alpha:LeftHandPinky4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandPinky1/SciFi:Alpha:LeftHandPinky2/SciFi:Alpha:LeftHandPinky3/SciFi:Alpha:LeftHandPinky5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2/SciFi:Alpha:LeftHandRing3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2/SciFi:Alpha:LeftHandRing3/SciFi:Alpha:LeftHandRing4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandRing1/SciFi:Alpha:LeftHandRing2/SciFi:Alpha:LeftHandRing3/SciFi:Alpha:LeftHandRing5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2/SciFi:Alpha:LeftHandThumb3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2/SciFi:Alpha:LeftHandThumb3/SciFi:Alpha:LeftHandThumb4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:LeftShoulder/SciFi:Alpha:LeftArm/SciFi:Alpha:LeftForeArm/SciFi:Alpha:LeftHand/SciFi:Alpha:LeftHandThumb1/SciFi:Alpha:LeftHandThumb2/SciFi:Alpha:LeftHandThumb3/SciFi:Alpha:LeftHandThumb5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck/SciFi:Alpha:Neck1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck/SciFi:Alpha:Neck1/SciFi:Alpha:Head
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:Neck/SciFi:Alpha:Neck1/SciFi:Alpha:Head/SciFi:Alpha:HeadTop_End
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2/SciFi:Alpha:RightHandIndex3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2/SciFi:Alpha:RightHandIndex3/SciFi:Alpha:RightHandIndex4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandIndex1/SciFi:Alpha:RightHandIndex2/SciFi:Alpha:RightHandIndex3/SciFi:Alpha:RightHandIndex5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2/SciFi:Alpha:RightHandMiddle3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2/SciFi:Alpha:RightHandMiddle3/SciFi:Alpha:RightHandMiddle4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandMiddle1/SciFi:Alpha:RightHandMiddle2/SciFi:Alpha:RightHandMiddle3/SciFi:Alpha:RightHandMiddle5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2/SciFi:Alpha:RightHandPinky3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2/SciFi:Alpha:RightHandPinky3/SciFi:Alpha:RightHandPinky4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandPinky1/SciFi:Alpha:RightHandPinky2/SciFi:Alpha:RightHandPinky3/SciFi:Alpha:RightHandPinky5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2/SciFi:Alpha:RightHandRing3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2/SciFi:Alpha:RightHandRing3/SciFi:Alpha:RightHandRing4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandRing1/SciFi:Alpha:RightHandRing2/SciFi:Alpha:RightHandRing3/SciFi:Alpha:RightHandRing5
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2/SciFi:Alpha:RightHandThumb3
+        weight: 1
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2/SciFi:Alpha:RightHandThumb3/SciFi:Alpha:RightHandThumb4
+        weight: 0
+      - path: SciFi:Alpha:Hips/SciFi:Alpha:Spine/SciFi:Alpha:Spine1/SciFi:Alpha:Spine2/SciFi:Alpha:RightShoulder/SciFi:Alpha:RightArm/SciFi:Alpha:RightForeArm/SciFi:Alpha:RightHand/SciFi:Alpha:RightHandThumb1/SciFi:Alpha:RightHandThumb2/SciFi:Alpha:RightHandThumb3/SciFi:Alpha:RightHandThumb5
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: SciFi:Alpha:Hips
+      humanName: Hips
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.07488117, y: 0, z: 0.037440587}
+        length: 0.0936015
+        modified: 1
+    - boneName: SciFi:Alpha:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: -60.000004, y: -60.000004, z: -90}
+        max: {x: 60.000004, y: 60.000004, z: 50}
+        value: {x: 0.3341266, y: 0, z: 0.1670633}
+        length: 0.4176584
+        modified: 1
+    - boneName: SciFi:Alpha:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: -60.000004, y: -60.000004, z: -90}
+        max: {x: 60.000004, y: 60.000004, z: 50}
+        value: {x: 0.33412632, y: 0, z: 0.16706316}
+        length: 0.41765803
+        modified: 1
+    - boneName: SciFi:Alpha:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.313593, y: 0, z: 0.1567965}
+        length: 0.3919914
+        modified: 1
+    - boneName: SciFi:Alpha:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.3135936, y: 0, z: 0.1567968}
+        length: 0.39199215
+        modified: 1
+    - boneName: SciFi:Alpha:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: -30.000002, z: -50}
+        max: {x: 0, y: 30.000002, z: 50}
+        value: {x: 0.11989169, y: 0, z: 0.059945844}
+        length: 0.14986464
+        modified: 1
+    - boneName: SciFi:Alpha:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: -30.000002, z: -50}
+        max: {x: 0, y: 30.000002, z: 50}
+        value: {x: 0.119891666, y: 0, z: 0.059945833}
+        length: 0.14986461
+        modified: 1
+    - boneName: SciFi:Alpha:Spine
+      humanName: Spine
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.13003875, y: 0, z: 0.06501938}
+        length: 0.16254851
+        modified: 1
+    - boneName: SciFi:Alpha:Spine1
+      humanName: Chest
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.22472343, y: 0, z: 0.112361714}
+        length: 0.28090435
+        modified: 1
+    - boneName: SciFi:Alpha:Neck
+      humanName: Neck
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.06844007, y: 0, z: 0.034220036}
+        length: 0.08555012
+        modified: 1
+    - boneName: SciFi:Alpha:Head
+      humanName: Head
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 0.06844007, y: 0, z: 0.034220036}
+        length: 0.08555012
+        modified: 1
+    - boneName: SciFi:Alpha:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: -15.000001, z: -15.000001}
+        max: {x: 0, y: 15.000001, z: 30.000002}
+        value: {x: 0.099988915, y: 0, z: 0.049994458}
+        length: 0.12498618
+        modified: 1
+    - boneName: SciFi:Alpha:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: -15.000001, z: -15.000001}
+        max: {x: 0, y: 15.000001, z: 30.000002}
+        value: {x: 0.10002074, y: 0, z: 0.05001037}
+        length: 0.12502596
+        modified: 1
+    - boneName: SciFi:Alpha:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: -90, y: -100, z: -60.000004}
+        max: {x: 90, y: 100, z: 100}
+        value: {x: 0.22149585, y: 0, z: 0.110747926}
+        length: 0.2768699
+        modified: 1
+    - boneName: SciFi:Alpha:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: -90, y: -100, z: -60.000004}
+        max: {x: 90, y: 100, z: 100}
+        value: {x: 0.22149569, y: 0, z: 0.110747844}
+        length: 0.27686968
+        modified: 1
+    - boneName: SciFi:Alpha:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.22299017, y: 0, z: 0.111495085}
+        length: 0.27873778
+        modified: 1
+    - boneName: SciFi:Alpha:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 0.22299013, y: 0, z: 0.11149506}
+        length: 0.27873772
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: -40, z: -80}
+        max: {x: 0, y: 40, z: 80}
+        value: {x: 0.111495085, y: 0, z: 0.055747543}
+        length: 0.13936889
+        modified: 1
+    - boneName: SciFi:Alpha:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: -40, z: -80}
+        max: {x: 0, y: 40, z: 80}
+        value: {x: 0.11149506, y: 0, z: 0.05574753}
+        length: 0.13936886
+        modified: 1
+    - boneName: SciFi:Alpha:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: -50}
+        max: {x: 0, y: 0, z: 50}
+        value: {x: 0.058964487, y: 0, z: 0.029482244}
+        length: 0.07370563
+        modified: 1
+    - boneName: SciFi:Alpha:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: -50}
+        max: {x: 0, y: 0, z: 50}
+        value: {x: 0.058964513, y: 0, z: 0.029482257}
+        length: 0.07370566
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: -25, z: -20}
+        max: {x: 0, y: 25, z: 20}
+        value: {x: 0.036111552, y: 0, z: 0.018055776}
+        length: 0.045139458
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.041429367, y: 0, z: 0.020714683}
+        length: 0.051786724
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.031072028, y: 0, z: 0.015536014}
+        length: 0.038840044
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.044394337, y: 0, z: 0.022197168}
+        length: 0.055492938
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.027128922, y: 0, z: 0.013564461}
+        length: 0.03391116
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.02034669, y: 0, z: 0.010173345}
+        length: 0.02543337
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.04633671, y: 0, z: 0.023168355}
+        length: 0.057920907
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.029705374, y: 0, z: 0.014852687}
+        length: 0.037131727
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.02227903, y: 0, z: 0.011139515}
+        length: 0.027848795
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.043561887, y: 0, z: 0.021780943}
+        length: 0.054452375
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.029705368, y: 0, z: 0.014852684}
+        length: 0.03713172
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022279024, y: 0, z: 0.011139512}
+        length: 0.02784879
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.02941003, y: 0, z: 0.014705015}
+        length: 0.036762547
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022490727, y: 0, z: 0.011245363}
+        length: 0.028113417
+        modified: 1
+    - boneName: SciFi:Alpha:LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.016868044, y: 0, z: 0.008434022}
+        length: 0.021085063
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: -25, z: -20}
+        max: {x: 0, y: 25, z: 20}
+        value: {x: 0.036341622, y: 0, z: 0.018170811}
+        length: 0.045427047
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.040746324, y: 0, z: 0.020373162}
+        length: 0.05093292
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: -40}
+        max: {x: 0, y: 0, z: 35}
+        value: {x: 0.030559747, y: 0, z: 0.015279873}
+        length: 0.038199693
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.043014143, y: 0, z: 0.021507071}
+        length: 0.053767696
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.027083721, y: 0, z: 0.0135418605}
+        length: 0.03385466
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.020312788, y: 0, z: 0.010156394}
+        length: 0.025390994
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.044934116, y: 0, z: 0.022467058}
+        length: 0.056167662
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.029890826, y: 0, z: 0.014945413}
+        length: 0.03736354
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022418117, y: 0, z: 0.011209059}
+        length: 0.028022654
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: -7.5000005, z: -50}
+        max: {x: 0, y: 7.5000005, z: 50}
+        value: {x: 0.04321019, y: 0, z: 0.021605095}
+        length: 0.054012753
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.027132746, y: 0, z: 0.013566373}
+        length: 0.03391594
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.020349558, y: 0, z: 0.010174779}
+        length: 0.025436956
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 0.02922207, y: 0, z: 0.014611035}
+        length: 0.036527596
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.022256246, y: 0, z: 0.011128123}
+        length: 0.027820315
+        modified: 1
+    - boneName: SciFi:Alpha:RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 0.016692182, y: 0, z: 0.008346091}
+        length: 0.020865235
+        modified: 1
+    skeleton:
+    - name: 24_Walks_InPlace
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:Hips
+      position: {x: 0, y: 0.99179804, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftUpLeg
+      position: {x: -0.09633797, y: -0.0327325, z: 0.000000010648759}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999998}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftLeg
+      position: {x: 0.0000128392385, y: -0.41730106, z: -0.01727705}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000005}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftFoot
+      position: {x: -0.0001327862, y: -0.3918997, z: -0.008474}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999964, y: 0.9999996, z: 0.99999964}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftToeBase
+      position: {x: 0.0018328647, y: -0.12193088, z: 0.082822695}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftFootToeBase_End
+      position: {x: -0, y: 8.673617e-21, z: 0.12699999}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightUpLeg
+      position: {x: 0.09633789, y: -0.03273256, z: -0.00000004031943}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999997, y: 0.9999997, z: 0.9999998}
+      transformModified: 1
+    - name: SciFi:Alpha:RightLeg
+      position: {x: -0.000002889035, y: -0.41730037, z: -0.017285831}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999998, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightFoot
+      position: {x: -0.00012659155, y: -0.39190063, z: -0.008476576}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: SciFi:Alpha:RightToeBase
+      position: {x: 0.001833067, y: -0.12193097, z: 0.08282271}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
+      transformModified: 1
+    - name: SciFi:Alpha:RightFootToeBase_End
+      position: {x: -0.00003194809, y: -1.7347234e-20, z: 0.12699999}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:Spine
+      position: {x: -0.000000033250924, y: 0.09226326, z: 0.015771449}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: SciFi:Alpha:Spine1
+      position: {x: -0.0000000030212612, y: 0.1625402, z: -0.0016560534}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:Spine2
+      position: {x: -0.0000000040124064, y: 0.1363964, z: -0.01292304}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999976, y: 0.99999976, z: 0.9999998}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftShoulder
+      position: {x: -0.061442256, y: 0.10187017, z: -0.037932463}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftArm
+      position: {x: -0.12319099, y: -0.011129765, z: -0.01793463}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftForeArm
+      position: {x: -0.27686998, y: 0.000008486238, z: 0.0000035849553}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHand
+      position: {x: -0.2787378, y: -0.0000060033435, z: -0.0000002516495}
+      rotation: {x: 0.09304692, y: 0.08742685, z: 0.036011405, w: 0.9911619}
+      scale: {x: 0.99999994, y: 0.99999964, z: 0.9999999}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandIndex1
+      position: {x: -0.10394534, y: 0.0061476114, z: 0.027054995}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandIndex2
+      position: {x: -0.055492923, y: 0.000000022038153, z: 0.000000008413707}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandIndex3
+      position: {x: -0.033911176, y: -0.000000048641084, z: -0.000000052796466}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.99999976}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandIndex4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandIndex5
+      position: {x: -0.025000002, y: 0.00000002317438, z: 0.0000000046874615}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandMiddle1
+      position: {x: -0.10463906, y: 0.006147579, z: 0.004297878}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandMiddle2
+      position: {x: -0.057920936, y: 0.00000006322933, z: 0.00000008858631}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandMiddle3
+      position: {x: -0.037131727, y: 0.0000000025366427, z: 0.000000024140705}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandMiddle4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandMiddle5
+      position: {x: -0.022999987, y: -0.000000050217835, z: -0.000000045642675}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandPinky1
+      position: {x: -0.10012992, y: -0.0007834751, z: -0.039671406}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandPinky2
+      position: {x: -0.036762536, y: -0.000000023311221, z: -0.000000025024605}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandPinky3
+      position: {x: -0.028113445, y: 0.00000006107451, z: 0.000000089783285}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandPinky4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandPinky5
+      position: {x: -0.02900001, y: -0.0000000042011297, z: -0.000000021295294}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandRing1
+      position: {x: -0.1032516, y: 0.003211289, z: -0.01875542}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandRing2
+      position: {x: -0.05445237, y: 0.00000006869393, z: 0.00000011272762}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandRing3
+      position: {x: -0.037131708, y: -0.000000039024517, z: -0.00000007289189}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandRing4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandRing5
+      position: {x: -0.02000001, y: 0.00000006577207, z: 0.00000005972128}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandThumb1
+      position: {x: -0.0237851, y: -0.010029028, z: 0.026209323}
+      rotation: {x: -0.08542974, y: 0.037892904, z: -0.08776875, w: 0.99174714}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandThumb2
+      position: {x: -0.03362373, y: -0.01002893, z: 0.028397826}
+      rotation: {x: -0.02453071, y: 0.081994414, z: -0.000087768305, w: 0.9963308}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandThumb3
+      position: {x: -0.045017924, y: -0.013445038, z: 0.021782612}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandThumb4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:LeftHandThumb5
+      position: {x: -0.026, y: -0.009999962, z: 0.010000052}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:Neck
+      position: {x: 0.000000010624381, y: 0.13877448, z: -0.043541897}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:Neck1
+      position: {x: 0.00000000550725, y: 0.04340033, z: 0.00926891}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+      transformModified: 1
+    - name: SciFi:Alpha:Head
+      position: {x: -4.4535456e-10, y: 0.040266052, z: 0.008585211}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999976, y: 0.9999998, z: 0.99999976}
+      transformModified: 1
+    - name: SciFi:Alpha:HeadTop_End
+      position: {x: -5.1704583e-18, y: 0.24809258, z: 0.0012312889}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightShoulder
+      position: {x: 0.06140198, y: 0.101870194, z: -0.037932463}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
+      transformModified: 1
+    - name: SciFi:Alpha:RightArm
+      position: {x: 0.12323135, y: -0.0111297835, z: -0.017934555}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999964, y: 0.99999964, z: 0.99999964}
+      transformModified: 1
+    - name: SciFi:Alpha:RightForeArm
+      position: {x: 0.27686983, y: 0.000011871682, z: 0.000003126554}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHand
+      position: {x: 0.27873772, y: 0.0000063683747, z: 0.00000024933868}
+      rotation: {x: 0.027530784, y: -0.08819791, z: -0.09837002, w: 0.9908514}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandIndex1
+      position: {x: 0.10466502, y: 0.0048957528, z: 0.027119543}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandIndex2
+      position: {x: 0.05376767, y: 0.000000020798852, z: 0.000000026614796}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandIndex3
+      position: {x: 0.033854686, y: -0.000000011753279, z: -0.000000047603535}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandIndex4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandIndex5
+      position: {x: 0.026000017, y: 0.000000017273974, z: -0.000000028122571}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandMiddle1
+      position: {x: 0.10759599, y: 0.0048957574, z: 0.0042779283}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandMiddle2
+      position: {x: 0.05616766, y: -0.000000032452938, z: -0.00000001175874}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandMiddle3
+      position: {x: 0.03736356, y: 0.000000009527223, z: -0.00000005536661}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandMiddle4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandMiddle5
+      position: {x: 0.022999968, y: 0.000000047031957, z: 0.000000056362143}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandPinky1
+      position: {x: 0.09971456, y: -0.0011914852, z: -0.039540086}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandPinky2
+      position: {x: 0.036527578, y: 0.00000003884894, z: 0.00000003244363}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999997, z: 0.9999998}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandPinky3
+      position: {x: 0.027820345, y: -0.000000006622569, z: -0.000000038120316}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandPinky4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandPinky5
+      position: {x: 0.028999995, y: 0.00000003119885, z: -0.000000010083765}
+      rotation: {x: -0.000000552909, y: 0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandRing1
+      position: {x: 0.104702115, y: 0.0038787, z: -0.019362805}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandRing2
+      position: {x: 0.054012764, y: -0.000000011427106, z: -0.000000049690065}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.9999999}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandRing3
+      position: {x: 0.033915948, y: -0.000000008483396, z: -0.0000000029719562}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandRing4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandRing5
+      position: {x: 0.022000002, y: 0.000000045446303, z: -0.00000000145607}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1.0000001, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandThumb1
+      position: {x: 0.025177643, y: -0.009366673, z: 0.025136651}
+      rotation: {x: -0.055713464, y: -0.021851003, z: 0.05328325, w: 0.9967845}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandThumb2
+      position: {x: 0.032637857, y: -0.010869665, z: 0.029668793}
+      rotation: {x: -0.028152056, y: -0.098991245, z: -0.0052979346, w: 0.9946759}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandThumb3
+      position: {x: 0.044165272, y: -0.013702639, z: 0.021350197}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandThumb4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: SciFi:Alpha:RightHandThumb5
+      position: {x: 0.025999997, y: -0.009999966, z: 0.010000029}
+      rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
+      scale: {x: 0.99999976, y: 0.9999996, z: 0.99999976}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

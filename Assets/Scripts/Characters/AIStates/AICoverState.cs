@@ -9,11 +9,14 @@ public class AICoverState<T> : IAIStateManager where T: AIManager
     private Vector3 m_trackCharacterPosition;
     private float m_coverTime = 0f;
     private float m_coverTimer = 0f;
+    private float m_fireTime = 5f;
+    private float m_fireTimer = 0f;
 
     public AICoverState(T aiManager)
     {
         m_aiGunnerOrCombat = aiManager;
         m_coverTime = UnityEngine.Random.Range(m_aiGunnerOrCombat.m_AIField.ChangeCoverPositionTime.MinValue, m_aiGunnerOrCombat.m_AIField.ChangeCoverPositionTime.MaxValue);
+        m_fireTimer = m_fireTime;
     }
 
     public void UpdateCurrentState()
@@ -46,6 +49,11 @@ public class AICoverState<T> : IAIStateManager where T: AIManager
                 {
                     m_aiGunnerOrCombat.m_isInCover = false;
                 }
+
+                bool aim = m_aiGunnerOrCombat.m_animator.GetBool("AimLeft");
+                m_aiGunnerOrCombat.m_animator.SetBool("AimLeft", !aim);
+                m_aiGunnerOrCombat.Crouch(false);
+                m_coverTimer = 0f;
             }
 
             if (m_aiGunnerOrCombat.m_coverPositionScript != null)
@@ -70,14 +78,6 @@ public class AICoverState<T> : IAIStateManager where T: AIManager
                     m_aiGunnerOrCombat.m_animator.SetBool("IsCover", false);
                     FindCoverPosition();
                 }
-            }
-
-            if(m_coverTimer > m_coverTime)
-            {
-                bool aim = m_aiGunnerOrCombat.m_animator.GetBool("AimLeft");
-                m_aiGunnerOrCombat.m_animator.SetBool("AimLeft", !aim);
-                m_aiGunnerOrCombat.Crouch(false);
-                m_coverTimer = 0f;
             }
         }
         else
@@ -177,6 +177,9 @@ public class AICoverState<T> : IAIStateManager where T: AIManager
     public void ChangeToChaseState()
     {
         m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_chaseAIState;
+        m_aiGunnerOrCombat.m_isInCover = false;
+        m_aiGunnerOrCombat.Crouch(false);
+        m_aiGunnerOrCombat.m_animator.SetBool("IsCover", false);
         ResetCoverState();
     }
 
@@ -198,6 +201,9 @@ public class AICoverState<T> : IAIStateManager where T: AIManager
         m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_searchAIState;
         m_aiGunnerOrCombat.m_mainDestinationPoint = m_trackCharacterPosition;
         m_aiGunnerOrCombat.m_navMeshPath = m_aiGunnerOrCombat.CalculateNavmeshPath(m_aiGunnerOrCombat.m_mainDestinationPoint);
+        m_aiGunnerOrCombat.m_isInCover = false;
+        m_aiGunnerOrCombat.Crouch(false);
+        m_aiGunnerOrCombat.m_animator.SetBool("IsCover", false);
         ResetCoverState();
     }
 

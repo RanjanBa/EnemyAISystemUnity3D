@@ -57,7 +57,7 @@ public class CoverPosition : MonoBehaviour
         }
         else if (Physics.Raycast(transform.position + Vector3.up * 0.5f, -Vector3.right, out hitInfo, 5f, m_LayerMask))
         {
-            Debug.Log("3 " + hitInfo.collider.name);
+            //Debug.Log("3 " + hitInfo.collider.name);
             Debug.DrawRay(hitInfo.point, hitInfo.normal * 5f, Color.white, 20f);
             Vector3 pos = hitInfo.point + hitInfo.normal * 0.5f;
             pos.y = 0f;
@@ -67,7 +67,7 @@ public class CoverPosition : MonoBehaviour
         }
         else if (Physics.Raycast(transform.position + Vector3.up * 0.5f, Vector3.right, out hitInfo, 5f, m_LayerMask))
         {
-            Debug.Log("4 " + hitInfo.collider.name);
+            //Debug.Log("4 " + hitInfo.collider.name);
             Debug.DrawRay(hitInfo.point, hitInfo.normal * 5f, Color.white, 20f);
             Vector3 pos = hitInfo.point + hitInfo.normal * 0.5f;
             pos.y = 0f;

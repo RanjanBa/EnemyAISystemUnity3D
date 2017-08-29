@@ -61,6 +61,10 @@ namespace AIManager_namespace
         //[HideInInspector]
         public CoverPosition m_coverPositionScript;
         //[HideInInspector]
+        public float m_coverFireTime = 5f;
+        //[HideInInspector]
+        public float m_coverFireTimer = 0f;
+        //[HideInInspector]
         public List<CharacterTypeAndTimerOfGameObject> m_charWithTypeAndTimer = new List<CharacterTypeAndTimerOfGameObject>();
         //[HideInInspector]
         public List<CharacterTypeOfGameObject> m_visibledCharWithType = new List<CharacterTypeOfGameObject>();

@@ -48,7 +48,7 @@ public class CoverFinder : MonoBehaviour
         }
         else
         {
-            Debug.Log(other.name);
+            //Debug.Log(other.name);
         }
     }
 }

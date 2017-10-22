@@ -4108,30 +4108,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &1101668727673719010
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: AimRight
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102400073265767668}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.8913044
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!1101 &1101676096077406936
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -4798,30 +4774,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102135784358754638}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.8913044
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &1101907475622951176
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: AimLeft
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102251090380261770}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -5674,7 +5626,6 @@ AnimatorState:
   - {fileID: 1101309399732255562}
   - {fileID: 1101578890339519716}
   - {fileID: 1101007388034310316}
-  - {fileID: 1101668727673719010}
   - {fileID: 1101326490140715962}
   - {fileID: 1101162113874193860}
   m_StateMachineBehaviours: []
@@ -5992,7 +5943,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Rifle_ShootOnce
-  m_Speed: 2
+  m_Speed: 2.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101414665023805972}
@@ -6097,7 +6048,6 @@ AnimatorState:
   - {fileID: 1101900051854573870}
   - {fileID: 1101778054905087004}
   - {fileID: 1101519353881748974}
-  - {fileID: 1101907475622951176}
   - {fileID: 1101896664927941606}
   - {fileID: 1101136828058737552}
   m_StateMachineBehaviours: []
@@ -6655,7 +6605,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Pistol_ShootOnce
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101582243823805340}
@@ -7048,7 +6998,7 @@ AnimatorStateMachine:
     m_Position: {x: -156, y: 48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102646807012449046}
-    m_Position: {x: -156, y: 120, z: 0}
+    m_Position: {x: -144, y: 108, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102045975369909002}
     m_Position: {x: 1152, y: 72, z: 0}
@@ -7063,7 +7013,7 @@ AnimatorStateMachine:
     m_Position: {x: -120, y: -12, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102195545138396012}
-    m_Position: {x: 264, y: 252, z: 0}
+    m_Position: {x: 300, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102400073265767668}
     m_Position: {x: 480, y: 288, z: 0}
@@ -7090,16 +7040,16 @@ AnimatorStateMachine:
     m_Position: {x: 1104, y: 204, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102042974214397868}
-    m_Position: {x: -84, y: 192, z: 0}
+    m_Position: {x: -96, y: 168, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102429937144260080}
-    m_Position: {x: -24, y: 264, z: 0}
+    m_Position: {x: -36, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102823946643419944}
-    m_Position: {x: 624, y: 240, z: 0}
+    m_Position: {x: 684, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102477311253696796}
-    m_Position: {x: 312, y: 168, z: 0}
+    m_Position: {x: 156, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102043903985534546}
     m_Position: {x: 828, y: 300, z: 0}

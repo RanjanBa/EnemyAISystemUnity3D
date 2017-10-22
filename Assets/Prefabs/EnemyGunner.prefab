@@ -2278,7 +2278,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1066898398924306}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3649,6 +3649,8 @@ MonoBehaviour:
   m_currentIndexOfGivenPath: 0
   m_offsetPosition: {x: 0, y: 0, z: 0}
   m_coverPositionScript: {fileID: 0}
+  m_coverFireTime: 5
+  m_coverFireTimer: 0
   m_charWithTypeAndTimer: []
   m_visibledCharWithType: []
   m_AIGunnerField: {fileID: 11400000, guid: 1b3ce227acfbeba4ebc28762618c3298, type: 2}
@@ -3689,7 +3691,7 @@ MonoBehaviour:
   m_OutOfBulletClip: {fileID: 8300000, guid: 65eb647f94fcad349a75b0f077127f61, type: 3}
   m_typeOfGun: 1
   m_CurrentBulletRound: 0
-  m_MaggazineTotalBullet: 0
+  m_MaggazineTotalBullet: 30
   m_OpponentCharacterTag: []
   m_BulletHittingLayerMask:
     serializedVersion: 2

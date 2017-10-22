@@ -9,8 +9,7 @@ public class AIGunFireState : IAIStateManager
     private Vector3 m_trackCharacterPosition = Vector3.zero;
     private float m_firingTimer = 0f;
     private float m_sqrDistanceFromMainDest = float.MaxValue;
-    private float m_crouchTimer = 0f;
-    private float m_crouchTime = 10f;
+    private float m_changingFireToCoverStateTimer = 0f;
 
     public AIGunFireState(AIGunnerManager aiGunner)
     {
@@ -20,6 +19,7 @@ public class AIGunFireState : IAIStateManager
     public void UpdateCurrentState()
     {
         Debug.Log("GunFire State..." + m_aiGunner.m_CharType.ToString());
+        m_aiGunner.m_AIVisibleTime = 0.1f;
 
         m_aiGunner.m_animator.SetFloat("Strafe", 1f);
         UpdateGunFireState();
@@ -28,7 +28,6 @@ public class AIGunFireState : IAIStateManager
 
     private void UpdateGunFireState()
     {
-        m_crouchTimer += Time.deltaTime;
         m_firingTimer += Time.deltaTime;
 
         m_aiGunner.CheckEveryCharacter();
@@ -39,47 +38,40 @@ public class AIGunFireState : IAIStateManager
             m_trackCharacterPosition = m_aiGunner.m_nearestOpponentVisibleCharacter.characterGameObject.transform.position;
         }
 
-        if (m_firingTimer >= m_aiGunner.m_activeGun.m_GunFireRate && m_crouchTimer >= 1f && m_aiGunner.m_activeGun.m_CurrentBulletRound > 0)
-        {
-            m_aiGunner.Fire(m_trackCharacterPosition - m_aiGunner.m_activeGun.m_GunBarrelPos.position);
-            m_firingTimer = 0f;
-        }
-        else if (m_aiGunner.m_activeGun.m_CurrentBulletRound <= 0 && m_aiGunner.m_isReloading == false)
-        {
-            m_aiGunner.Reload();
-        }
+        Vector3 fromAgentToOpponentDirection = m_trackCharacterPosition - m_aiGunner.transform.position;
 
-        if (m_aiGunner.m_nearestOpponentVisibleCharacter.characterGameObject != null && m_aiGunner.m_coverPositionScript != null)
-        {
-            Vector3 fromCoverToOpponentDirection = m_aiGunner.m_nearestOpponentVisibleCharacter.characterGameObject.transform.position - m_aiGunner.m_coverPositionScript.transform.position;
-            Debug.DrawRay(m_aiGunner.m_coverPositionScript.transform.position + Vector3.up * 0.5f, fromCoverToOpponentDirection.normalized * 3f, Color.magenta, 3f);
+        Debug.DrawRay(m_aiGunner.m_coverPositionScript.transform.position + Vector3.up * 0.5f, fromAgentToOpponentDirection.normalized * 3f, Color.magenta, 3f);
 
-            if (!Physics.Raycast(m_aiGunner.m_coverPositionScript.transform.position + Vector3.up * 0.5f, fromCoverToOpponentDirection, 3f, m_aiGunner.m_EnvironmentLayerForCover, QueryTriggerInteraction.Ignore))
+        if (!Physics.Raycast(m_aiGunner.m_coverPositionScript.transform.position + Vector3.up * 0.5f, fromAgentToOpponentDirection, 3f, m_aiGunner.m_EnvironmentLayerForCover, QueryTriggerInteraction.Ignore))
+        {
+            m_aiGunner.Crouch(false);
+            ChangeToCoverState();
+        }
+        else
+        {
+            Debug.Log("Does hit the cover layerMask");
+
+            if (m_aiGunner.m_navMeshPath.corners.Length <= 2)
             {
-                m_aiGunner.Crouch(false);
-                ChangeToCoverState();
+                m_aiGunner.m_currentDestinationPoint = m_aiGunner.m_mainDestinationPoint;
             }
-            else
+            else if (m_aiGunner.m_currentIndexOfCalculatedNavmeshPath >= m_aiGunner.m_navMeshPath.corners.Length - 1)
             {
-                Debug.Log("Does hit the cover layerMask");
-                if(m_aiGunner.m_isCrouching == false)
-                {
-                    if (m_crouchTimer >= m_crouchTime || m_aiGunner.m_activeGun.m_CurrentBulletRound <= 0)
-                    {
-                        m_aiGunner.Crouch(true);
-                        m_crouchTimer = 0f;
-                    }
-                }
+                m_aiGunner.m_currentIndexOfCalculatedNavmeshPath = m_aiGunner.m_navMeshPath.corners.Length - 1;
+                m_aiGunner.m_currentDestinationPoint = m_aiGunner.m_navMeshPath.corners[m_aiGunner.m_currentIndexOfCalculatedNavmeshPath];
+            }
+        }
 
-                if (m_aiGunner.m_navMeshPath.corners.Length <= 2)
-                {
-                    m_aiGunner.m_currentDestinationPoint = m_aiGunner.m_mainDestinationPoint;
-                }
-                else if (m_aiGunner.m_currentIndexOfCalculatedNavmeshPath >= m_aiGunner.m_navMeshPath.corners.Length - 1)
-                {
-                    m_aiGunner.m_currentIndexOfCalculatedNavmeshPath = m_aiGunner.m_navMeshPath.corners.Length - 1;
-                    m_aiGunner.m_currentDestinationPoint = m_aiGunner.m_navMeshPath.corners[m_aiGunner.m_currentIndexOfCalculatedNavmeshPath];
-                }
+        if (!m_aiGunner.m_isCrouching)
+        {
+            if (m_firingTimer >= m_aiGunner.m_activeGun.m_GunFireRate && m_aiGunner.m_activeGun.m_CurrentBulletRound > 0)
+            {
+                m_aiGunner.Fire(m_trackCharacterPosition - m_aiGunner.m_activeGun.m_GunBarrelPos.position);
+                m_firingTimer = 0f;
+            }
+            else if (m_aiGunner.m_activeGun.m_CurrentBulletRound <= 0 && m_aiGunner.m_isReloading == false)
+            {
+                m_aiGunner.Reload();
             }
         }
 
@@ -99,10 +91,16 @@ public class AIGunFireState : IAIStateManager
 
     private void ChangeStateConditions()
     {
-        if(m_aiGunner.m_nearestOpponentVisibleCharacter.characterGameObject == null)
+        if(m_aiGunner.m_deltaChangeInHealth > 30)
         {
-            ChangeToSearchState();
+            ChangeToCoverState();
+            m_aiGunner.ResetDeltaChangeInHealth();
         }
+
+        //if(m_aiGunner.m_nearestOpponentVisibleCharacter.characterGameObject == null)
+        //{
+        //    ChangeToSearchState();
+        //}
     }
 
     public void ChangeToGunFireState()

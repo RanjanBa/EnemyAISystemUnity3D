@@ -32,6 +32,11 @@ public class EnemyGunner : AIGunnerManager
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            TakeDamage(10, DamageType.DamageByGun);
+        }
+
         InWhatState();
     }
 

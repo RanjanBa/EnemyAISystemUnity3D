@@ -25,6 +25,7 @@ namespace AIManager_namespace
         public float m_ThresholdDistance = 0.2f;
         [Tooltip("AI variables")]
         public AIField m_AIField;
+        public float m_coolDownRate = 1f;
         public float m_AIVisibleTime = 3f;
         public Path m_FollowPath;
         #endregion Customizable Public Variables
@@ -39,7 +40,7 @@ namespace AIManager_namespace
         //[HideInInspector]
         public CharacterTypeOfGameObject m_nearestOpponentVisibleCharacter;
         //[HideInInspector]
-        public int m_deltaChangeInHealth;
+        public int m_deltaChangeInHealth { get; private set; }
         [HideInInspector]
         public Vector3 m_invetigate_searchDirection;
         [HideInInspector]
@@ -590,6 +591,11 @@ namespace AIManager_namespace
         public virtual void UnEquipWeapon()
         {
             Debug.Log("Base UnEquipWeapon Class...");
+        }
+
+        public void ResetDeltaChangeInHealth()
+        {
+            m_deltaChangeInHealth = 0;
         }
 
         protected virtual void OnDrawGizmosSelected()

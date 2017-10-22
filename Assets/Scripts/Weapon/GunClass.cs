@@ -13,7 +13,7 @@ namespace gunClass_namespace
         public AudioClip m_OutOfBulletClip;
         public TypeOfGun m_typeOfGun;
         public int m_CurrentBulletRound;
-        public int m_MaggazineTotalBullet;
+        public int m_MaggazineTotalBullet = 30;
         public string[] m_OpponentCharacterTag;
         public LayerMask m_BulletHittingLayerMask;
 

@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-using gunClass_namespace;
+using System.Collections.Generic;
+using GunClass_namespace;
 
 namespace AIManager_namespace
 {
     public abstract class AIGunnerManager : AIManager
     {
+#region AIGunner Variables
+        [Header("AI Gunner Variables")]
+        [Tooltip("Enemy gunners properties...")]
         public AIGunnerField m_AIGunnerField;
         [Tooltip("For keeping the Hand gun during hostler")]
         public Transform m_HandGunHoldingPosition;
@@ -17,105 +21,77 @@ namespace AIManager_namespace
         public Transform m_EquipingAssultRiflePosition;
 
         //[HideInInspector]
-        public bool m_isReloading = false;
+        public bool m_IsReloading = false;
         //[HideInInspector]
-        public GunClass[] m_gun;
+        public List<GunClass> m_Guns;
         //[HideInInspector]
-        public GunClass m_activeGun;
+        public GunClass m_CurrentlyActiveGun;
+        public bool m_IsEquippedWithWeapon = false;
 
-        protected bool m_isEquippedWithWeapon = false;
+#endregion AIGunner Variables
 
         protected override void Initialized()
         {
-            base.Initialized();
+            GunClass[] guns = GetComponentsInChildren<GunClass>();
+            foreach (GunClass item in guns)
+            {
+                m_Guns.Add(item);
+            }
 
-            m_gun = GetComponentsInChildren<GunClass>();
-
-            m_activeGun = m_gun[Random.Range(0, m_gun.Length)];
+            m_CurrentlyActiveGun = m_Guns[Random.Range(0, m_Guns.Count)];
 
             float sqrRange = m_AIGunnerField.AttackbyGunRange * m_AIGunnerField.AttackbyGunRange;
 
             m_unwareAIState = new AIUnwareState<AIManager>(this, sqrRange);
-            m_investigateAIState = new AIInvestigateState<AIManager>(this, sqrRange);
             m_patrolAIState = new AIPatrolState<AIManager>(this, sqrRange);
             m_chaseAIState = new AIChaseState<AIManager>(this, sqrRange);
             m_searchAIState = new AISearchState<AIManager>(this, sqrRange);
             m_coverAIState = new AICoverState<AIManager>(this);
             m_gunFireAIState = new AIGunFireState(this);
 
-            if(m_unwareAIState == null || m_investigateAIState == null ||
-                m_patrolAIState == null || m_chaseAIState == null ||
-                m_searchAIState == null || m_gunFireAIState == null)
+            if(m_unwareAIState == null || m_patrolAIState == null ||
+                m_chaseAIState == null || m_searchAIState == null ||
+                m_gunFireAIState == null)
             {
                 Debug.LogError("AI State is null");
             }
 
-            if (AIStates[AIIndex] == "UnwareState")
-            {
-                m_currentAIState = m_unwareAIState;
-            }
-            else if (AIStates[AIIndex] == "InvestigateState")
-            {
-                m_currentAIState = m_investigateAIState;
-            }
-            else if (AIStates[AIIndex] == "PatrolState")
-            {
-                m_currentAIState = m_patrolAIState;
-            }
-            else if (AIStates[AIIndex] == "SearchState")
-            {
-                m_currentAIState = m_searchAIState;
-            }
-            else if (AIStates[AIIndex] == "ChaseState")
-            {
-                m_currentAIState = m_chaseAIState;
-            }
-            else if (AIStates[AIIndex] == "CoverState")
-            {
-                m_currentAIState = m_coverAIState;
-            }
-            else if (AIStates[AIIndex] == "CorrespondingActionState")
-            {
-                if(m_CharType == CharacterType.EnemyGunner || m_CharType == CharacterType.PlayerGunnerCampanion)
-                {
-                    m_currentAIState = m_gunFireAIState;
-                }
-                else
-                {
-                    m_currentAIState = m_boxingAIState;
-                }                
-            }
+            base.Initialized();
         }
 
-        public void Fire(Vector3 directionOfFire)
+        public void Fire(Vector3 opponentPosition)
         {
-            directionOfFire.y = 0f;
-            if(m_isEquippedWithWeapon == false || Vector3.Angle(transform.forward, directionOfFire) > 30f)
+            if(m_IsEquippedWithWeapon == false || Vector3.Angle(transform.forward, opponentPosition - m_CurrentlyActiveGun.transform.position) > 30f)
             {
                 return;
             }
 
             m_animator.SetInteger("ShootID", 0);
             m_animator.SetTrigger("Shoot");
-            m_activeGun.Fire(transform.forward);
+            m_CurrentlyActiveGun.Fire(transform.forward);
         }
 
         public void Reload()
         {
-            m_isReloading = true;
-            m_animator.SetBool("IsReloading", m_isReloading);
+            m_IsReloading = true;
+            m_animator.SetBool("IsReloading", m_IsReloading);
         }
 
-        public override void EquipWithWeapon()
+        public virtual void EquipWithWeapon()
         {
             StartCoroutine(EquipingWeaponIEnumerator());
         }
 
-        public override void UnEquipWeapon()
+        public virtual void UnEquipWeapon()
         {
-            m_isEquippedWithWeapon = false;
+            m_IsEquippedWithWeapon = false;
             m_animator.SetTrigger("UnEquip");
             StartCoroutine(UnEquipingIEnumerator());
+        }
+
+        private void OnAnimatorMove()
+        {
+            
         }
 
         private IEnumerator EquipingWeaponIEnumerator()
@@ -124,7 +100,7 @@ namespace AIManager_namespace
 
             while (true)
             {
-                if (m_activeGun.m_typeOfGun == TypeOfGun.OneHandedGun)
+                if (m_CurrentlyActiveGun.m_TypeOfGun == TypeOfGun.OneHandedGun)
                 {
                     float weight = m_animator.GetLayerWeight(2);
                     weight += Time.deltaTime;
@@ -136,7 +112,7 @@ namespace AIManager_namespace
                         break;
                     }
                 }
-                else if (m_activeGun.m_typeOfGun == TypeOfGun.TwoHandedGun)
+                else if (m_CurrentlyActiveGun.m_TypeOfGun == TypeOfGun.TwoHandedGun)
                 {
                     float weight = m_animator.GetLayerWeight(3);
                     weight += Time.deltaTime;
@@ -155,7 +131,7 @@ namespace AIManager_namespace
             m_animator.SetTrigger("Equip");
 
             yield return new WaitForSeconds(3f);
-            m_isEquippedWithWeapon = true;
+            m_IsEquippedWithWeapon = true;
             yield return null;
         }
 
@@ -165,7 +141,7 @@ namespace AIManager_namespace
 
             while (true)
             {
-                if (m_activeGun.m_typeOfGun == TypeOfGun.OneHandedGun)
+                if (m_CurrentlyActiveGun.m_TypeOfGun == TypeOfGun.OneHandedGun)
                 {
                     float weight = m_animator.GetLayerWeight(2);
                     weight -= Time.deltaTime;
@@ -177,7 +153,7 @@ namespace AIManager_namespace
                         break;
                     }
                 }
-                else if (m_activeGun.m_typeOfGun == TypeOfGun.TwoHandedGun)
+                else if (m_CurrentlyActiveGun.m_TypeOfGun == TypeOfGun.TwoHandedGun)
                 {
                     float weight = m_animator.GetLayerWeight(3);
                     weight -= Time.deltaTime;
@@ -201,38 +177,38 @@ namespace AIManager_namespace
         {
             if (num == 1)
             {
-                m_activeGun.gameObject.transform.SetParent(m_EquipingHandGunPosition);
-                m_activeGun.gameObject.transform.localPosition = Vector3.zero;
-                m_activeGun.gameObject.transform.localRotation = Quaternion.identity;
+                m_CurrentlyActiveGun.gameObject.transform.SetParent(m_EquipingHandGunPosition);
+                m_CurrentlyActiveGun.gameObject.transform.localPosition = Vector3.zero;
+                m_CurrentlyActiveGun.gameObject.transform.localRotation = Quaternion.identity;
             }
             else if (num == 2)
             {
-                m_activeGun.gameObject.transform.SetParent(m_EquipingAssultRiflePosition);
-                m_activeGun.gameObject.transform.localPosition = Vector3.zero;
-                m_activeGun.gameObject.transform.localRotation = Quaternion.identity;
+                m_CurrentlyActiveGun.gameObject.transform.SetParent(m_EquipingAssultRiflePosition);
+                m_CurrentlyActiveGun.gameObject.transform.localPosition = Vector3.zero;
+                m_CurrentlyActiveGun.gameObject.transform.localRotation = Quaternion.identity;
             }
             else if (num == 3)
             {
-                if (m_activeGun.m_typeOfGun == TypeOfGun.OneHandedGun)
+                if (m_CurrentlyActiveGun.m_TypeOfGun == TypeOfGun.OneHandedGun)
                 {
-                    m_activeGun.gameObject.transform.SetParent(m_HandGunHoldingPosition);
-                    m_activeGun.gameObject.transform.localPosition = Vector3.zero;
-                    m_activeGun.gameObject.transform.localRotation = Quaternion.identity;
+                    m_CurrentlyActiveGun.gameObject.transform.SetParent(m_HandGunHoldingPosition);
+                    m_CurrentlyActiveGun.gameObject.transform.localPosition = Vector3.zero;
+                    m_CurrentlyActiveGun.gameObject.transform.localRotation = Quaternion.identity;
                 }
-                else if (m_activeGun.m_typeOfGun == TypeOfGun.TwoHandedGun)
+                else if (m_CurrentlyActiveGun.m_TypeOfGun == TypeOfGun.TwoHandedGun)
                 {
-                    m_activeGun.gameObject.transform.SetParent(m_EquipingHandGunPosition);
-                    m_activeGun.gameObject.transform.localPosition = Vector3.zero;
-                    m_activeGun.gameObject.transform.localRotation = Quaternion.identity;
+                    m_CurrentlyActiveGun.gameObject.transform.SetParent(m_EquipingHandGunPosition);
+                    m_CurrentlyActiveGun.gameObject.transform.localPosition = Vector3.zero;
+                    m_CurrentlyActiveGun.gameObject.transform.localRotation = Quaternion.identity;
                 }
             }
             else if (num == 4)
             {
-                if (m_activeGun.m_typeOfGun == TypeOfGun.TwoHandedGun)
+                if (m_CurrentlyActiveGun.m_TypeOfGun == TypeOfGun.TwoHandedGun)
                 {
-                    m_activeGun.gameObject.transform.SetParent(m_AssaultRifleHoldingPosition);
-                    m_activeGun.gameObject.transform.localPosition = Vector3.zero;
-                    m_activeGun.gameObject.transform.localRotation = Quaternion.identity;
+                    m_CurrentlyActiveGun.gameObject.transform.SetParent(m_AssaultRifleHoldingPosition);
+                    m_CurrentlyActiveGun.gameObject.transform.localPosition = Vector3.zero;
+                    m_CurrentlyActiveGun.gameObject.transform.localRotation = Quaternion.identity;
                 }
 
             }
@@ -243,13 +219,13 @@ namespace AIManager_namespace
         {
             if (reload == "start")
             {
-                m_isReloading = true;
+                m_IsReloading = true;
             }
             else if (reload == "exit")
             {
-                m_isReloading = false;
-                m_animator.SetBool("IsReloading", m_isReloading);
-                m_activeGun.m_CurrentBulletRound = m_activeGun.m_MaggazineTotalBullet;
+                m_IsReloading = false;
+                m_animator.SetBool("IsReloading", m_IsReloading);
+                m_CurrentlyActiveGun.Reload();
             }
         }
     }

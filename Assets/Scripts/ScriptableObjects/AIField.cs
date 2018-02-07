@@ -14,7 +14,7 @@ public class AIField : ScriptableObject
     [Tooltip("Time for staying in patrol state")]
     public MinMaxValue m_MinMaxPatrolTime = new MinMaxValue(10f, 20f);
     [Range(-180f, 180f)]
-    public float[] SearchOrInvetigateRegions;
+    public float[] SearchRegions;
     [Range(0f, 30f)]
     public float RangeOfSearchingCoverPos = 10f;
     [Tooltip("Change the cover position to another best coverPosition.")]

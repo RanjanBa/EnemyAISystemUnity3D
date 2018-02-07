@@ -46,56 +46,25 @@ public class EnemyGunner : AIGunnerManager
         {
             AIIndex = 0;
         }
-        else if (m_currentAIState == m_investigateAIState )
+        else if (m_currentAIState == m_patrolAIState)
         {
             AIIndex = 1;
         }
-        else if (m_currentAIState == m_patrolAIState)
+        else if (m_currentAIState == m_searchAIState)
         {
             AIIndex = 2;
         }
-        else if (m_currentAIState == m_searchAIState)
+        else if (m_currentAIState == m_chaseAIState)
         {
             AIIndex = 3;
         }
-        else if (m_currentAIState == m_chaseAIState)
+        else if (m_currentAIState == m_coverAIState)
         {
             AIIndex = 4;
         }
-        else if (m_currentAIState == m_coverAIState)
+        else if (m_currentAIState == m_gunFireAIState)
         {
             AIIndex = 5;
         }
-        else if (m_currentAIState == m_gunFireAIState)
-        {
-            AIIndex = 6;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        //if (m_canMove)
-        //{
-        //    for (int i = 0; i < 3; i++)
-        //    {
-        //        Vector3 pos = transform.position + (0.2f + i * 0.3f) * transform.up;
-        //        RaycastHit hitInfo;
-        //        if (Physics.Raycast(pos, transform.forward, out hitInfo, 1f))
-        //        {
-        //            if (!hitInfo.collider.transform.root.gameObject.isStatic)
-        //            {
-        //                return;
-        //            }
-
-        //            StartCoroutine(FrozeMovementForWaitTimer(2f));
-        //            CalculatePath(m_destinationPosition);
-        //            if (m_navMeshPath.status == UnityEngine.AI.NavMeshPathStatus.PathPartial || m_navMeshPath.status == UnityEngine.AI.NavMeshPathStatus.PathInvalid)
-        //            {
-        //                m_destinationPosition = GetNextDestinationPointFromPath();
-        //            }
-        //            break;
-        //        }
-        //    }
-        //}
     }
 }

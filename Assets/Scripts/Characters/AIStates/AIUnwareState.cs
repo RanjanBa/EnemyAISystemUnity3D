@@ -6,36 +6,37 @@ public class AIUnwareState<T> : IAIStateManager where T : AIManager
     private T m_aiGunnerOrCombat;
     private float m_sqrOfAttackRange = float.MaxValue;
     private float m_unwareStateTimer = 0f;
+    private float m_unwareTime;
 
     public AIUnwareState(T aiGunnerOrCombat, float sqrOfAttackingRange)
     {
         m_aiGunnerOrCombat = aiGunnerOrCombat;
         m_sqrOfAttackRange = sqrOfAttackingRange;
+        m_unwareTime = Random.Range(m_aiGunnerOrCombat.m_AIField.m_MinMaxUnwareTime.MinValue, m_aiGunnerOrCombat.m_AIField.m_MinMaxUnwareTime.MaxValue);
+    }
+
+    public void OnStateEnter()
+    {
+        Debug.Log("Enter of unwareState...");
+        m_aiGunnerOrCombat.m_currentAnimationState = AnimationState.IdleAnimation;
     }
 
     public void UpdateCurrentState()
     {
-        Debug.Log("Unware State...");
-
         m_unwareStateTimer += Time.deltaTime;
-        m_aiGunnerOrCombat.m_canMove = false;
         UpdateUnwareState();
         ChangeStateConditions();
     }
 
     private void UpdateUnwareState()
     {
-        float m_speed = m_aiGunnerOrCombat.m_animator.GetFloat("Speed");
-        m_speed = Mathf.Lerp(m_speed, 0f, Time.deltaTime * 2f);
-        m_aiGunnerOrCombat.m_animator.SetFloat("Speed", m_speed);
-
-        m_aiGunnerOrCombat.CheckEveryCharacter();
+        m_aiGunnerOrCombat.CheckEveryCharacterForInVisualRange();
         m_aiGunnerOrCombat.m_nearestOpponentVisibleCharacter = m_aiGunnerOrCombat.FindNearestOpponentGameObjectWithType();
     }
 
     private void ChangeStateConditions()
     {
-        if(m_unwareStateTimer >= m_aiGunnerOrCombat.m_unwareTime)
+        if(m_unwareStateTimer >= m_unwareTime)
         {
             ChangeToPatrolState();
             return;
@@ -44,7 +45,7 @@ public class AIUnwareState<T> : IAIStateManager where T : AIManager
         if (m_aiGunnerOrCombat.m_canIHearSomething)
         {
             m_aiGunnerOrCombat.m_canIHearSomething = false;
-            ChangeToInvestigateState();
+            ChangeToSearchState();
             return;
         }
 
@@ -79,21 +80,27 @@ public class AIUnwareState<T> : IAIStateManager where T : AIManager
 
     public void ChangeToSearchState()
     {
-        throw new System.NotImplementedException();
+        m_aiGunnerOrCombat.m_searchAIState.m_offsetPosition = m_aiGunnerOrCombat.m_mainDestinationPoint;
+        m_aiGunnerOrCombat.m_searchAIState.m_invetigate_searchDirection = m_aiGunnerOrCombat.m_mainDestinationPoint - m_aiGunnerOrCombat.transform.position;
+        if (Mathf.Abs(Vector3.SqrMagnitude(m_aiGunnerOrCombat.m_searchAIState.m_invetigate_searchDirection)) <= 0.1f)
+        {
+            m_aiGunnerOrCombat.m_searchAIState.m_invetigate_searchDirection = m_aiGunnerOrCombat.transform.forward;
+        }
+
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_searchAIState);
     }
 
     public void ChangeToChaseState()
     {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_chaseAIState;
         m_aiGunnerOrCombat.m_mainDestinationPoint = m_aiGunnerOrCombat.m_nearestOpponentVisibleCharacter.characterGameObject.transform.position;
         m_aiGunnerOrCombat.m_navMeshPath = m_aiGunnerOrCombat.CalculateNavmeshPath(m_aiGunnerOrCombat.m_mainDestinationPoint);
 
-        if (m_aiGunnerOrCombat.m_CharType == CharacterType.EnemyGunner || m_aiGunnerOrCombat.m_CharType == CharacterType.PlayerGunnerCampanion)
+        if(m_aiGunnerOrCombat.m_CharType == CharacterType.EnemyGunner || m_aiGunnerOrCombat.m_CharType == CharacterType.PlayerGunnerCampanion)
         {
-            m_aiGunnerOrCombat.EquipWithWeapon();
+            m_aiGunnerOrCombat.m_gunFireAIState.EquipWeapon();
         }
 
-        ResetUnwareState();
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_chaseAIState);
     }
 
     public void ChangeToCoverState()
@@ -121,60 +128,43 @@ public class AIUnwareState<T> : IAIStateManager where T : AIManager
             return;
         }
 
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_coverAIState;
         if (m_aiGunnerOrCombat.m_CharType == CharacterType.EnemyGunner || m_aiGunnerOrCombat.m_CharType == CharacterType.PlayerGunnerCampanion)
         {
-            m_aiGunnerOrCombat.EquipWithWeapon();
+            m_aiGunnerOrCombat.m_gunFireAIState.EquipWeapon();
         }
-        ResetUnwareState();
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_coverAIState);
     }
 
     public void ChangeToGunFireState()
     {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_gunFireAIState;
         m_aiGunnerOrCombat.m_isInCover = false;
-        m_aiGunnerOrCombat.m_animator.SetBool("IsCover", m_aiGunnerOrCombat.m_isInCover);
-        m_aiGunnerOrCombat.EquipWithWeapon();
-        ResetUnwareState();
+        m_aiGunnerOrCombat.UpdateCoverAnimation(false, false);
+        m_aiGunnerOrCombat.m_gunFireAIState.EquipWeapon();
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_gunFireAIState);
     }
 
     public void ChangeToBoxingState()
     {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_boxingAIState;
         m_aiGunnerOrCombat.StartCoroutine(m_aiGunnerOrCombat.ChangeAnimationLayer(1, 0));
-        ResetUnwareState();
-    }
-
-    public void ChangeToInvestigateState()
-    {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_investigateAIState;
-        if (m_aiGunnerOrCombat.m_CharType == CharacterType.EnemyGunner || m_aiGunnerOrCombat.m_CharType == CharacterType.PlayerGunnerCampanion)
-        {
-            m_aiGunnerOrCombat.EquipWithWeapon();
-        }
-        m_aiGunnerOrCombat.m_mainDestinationPoint = m_aiGunnerOrCombat.m_offsetPosition;
-        m_aiGunnerOrCombat.m_navMeshPath = m_aiGunnerOrCombat.CalculateNavmeshPath(m_aiGunnerOrCombat.m_mainDestinationPoint);
-        m_aiGunnerOrCombat.m_invetigate_searchDirection = m_aiGunnerOrCombat.m_mainDestinationPoint - m_aiGunnerOrCombat.transform.position;
-        if (Mathf.Abs(Vector3.SqrMagnitude(m_aiGunnerOrCombat.m_invetigate_searchDirection)) <= 0.1f)
-        {
-            m_aiGunnerOrCombat.m_invetigate_searchDirection = m_aiGunnerOrCombat.transform.forward;
-        }
-        m_aiGunnerOrCombat.m_invetigate_searchDirection.y = 0f;
-        ResetUnwareState();
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_boxingAIState);
     }
 
     public void ChangeToPatrolState()
     {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_patrolAIState;
         m_aiGunnerOrCombat.m_mainDestinationPoint = m_aiGunnerOrCombat.m_FollowPath.pathTransformPosition[m_aiGunnerOrCombat.m_currentIndexOfGivenPath].position;
         m_aiGunnerOrCombat.m_navMeshPath = m_aiGunnerOrCombat.CalculateNavmeshPath(m_aiGunnerOrCombat.m_mainDestinationPoint);
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_patrolAIState);
+    }
+
+    public void OnStateExit()
+    {
         ResetUnwareState();
+        Debug.Log("Exit of unwareState...");
     }
 
     private void ResetUnwareState()
     {
-        m_aiGunnerOrCombat.m_canMove = true;
         m_unwareStateTimer = 0f;
-        m_aiGunnerOrCombat.m_unwareTime = Random.Range(m_aiGunnerOrCombat.m_AIField.m_MinMaxUnwareTime.MinValue, m_aiGunnerOrCombat.m_AIField.m_MinMaxUnwareTime.MaxValue);
+        m_unwareTime = Random.Range(m_aiGunnerOrCombat.m_AIField.m_MinMaxUnwareTime.MinValue, m_aiGunnerOrCombat.m_AIField.m_MinMaxUnwareTime.MaxValue);
     }
 }

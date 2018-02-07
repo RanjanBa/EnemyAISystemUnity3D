@@ -49,3 +49,9 @@ public enum DamageType
     DamageByHand,
     DamageByGun,
 }
+
+public enum CameraMovementType
+{
+    FreeLook,
+    LockLook,
+}

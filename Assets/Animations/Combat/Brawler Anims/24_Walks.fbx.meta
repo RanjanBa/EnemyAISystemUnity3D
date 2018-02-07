@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 344fdc091210042a7999ea160984f22c
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     100002: SciFi:Alpha:Head
@@ -160,16 +160,20 @@ ModelImporter:
     7400000: Walk Backward
     7400002: Walk Forward
     9500000: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
@@ -178,12 +182,14 @@ ModelImporter:
       inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Walk Backward
@@ -555,7 +561,10 @@ ModelImporter:
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -571,9 +580,11 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human:
     - boneName: SciFi:Alpha:Hips
       humanName: Hips
@@ -985,390 +996,390 @@ ModelImporter:
         modified: 1
     skeleton:
     - name: 24_Walks
+      parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:Hips
+      parentName: 
       position: {x: 0, y: 0.99179804, z: 0}
       rotation: {x: 0, y: -0, z: 0, w: 0.99999994}
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftUpLeg
+      parentName: 
       position: {x: -0.09633797, y: -0.0327325, z: 0.000000010648759}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999976, y: 0.99999976, z: 0.9999998}
-      transformModified: 1
     - name: SciFi:Alpha:LeftLeg
+      parentName: 
       position: {x: 0.0000128392385, y: -0.41730106, z: -0.01727705}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000004, y: 1.0000004, z: 1.0000005}
-      transformModified: 1
     - name: SciFi:Alpha:LeftFoot
+      parentName: 
       position: {x: -0.0001327862, y: -0.3918997, z: -0.008474}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999964, y: 0.9999996, z: 0.99999964}
-      transformModified: 1
     - name: SciFi:Alpha:LeftToeBase
+      parentName: 
       position: {x: 0.0018328647, y: -0.12193088, z: 0.082822695}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
-      transformModified: 1
     - name: SciFi:Alpha:LeftFootToeBase_End
+      parentName: 
       position: {x: -0, y: 8.673617e-21, z: 0.12699999}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightUpLeg
+      parentName: 
       position: {x: 0.09633789, y: -0.03273256, z: -0.00000004031943}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999997, y: 0.9999997, z: 0.9999998}
-      transformModified: 1
     - name: SciFi:Alpha:RightLeg
+      parentName: 
       position: {x: -0.000002889035, y: -0.41730037, z: -0.017285831}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999999, y: 0.9999998, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightFoot
+      parentName: 
       position: {x: -0.00012659155, y: -0.39190063, z: -0.008476576}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 0.99999994}
-      transformModified: 1
     - name: SciFi:Alpha:RightToeBase
+      parentName: 
       position: {x: 0.001833067, y: -0.12193097, z: 0.08282271}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
-      transformModified: 1
     - name: SciFi:Alpha:RightFootToeBase_End
+      parentName: 
       position: {x: -0.00003194809, y: -1.7347234e-20, z: 0.12699999}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:Spine
+      parentName: 
       position: {x: -0.000000033250924, y: 0.09226326, z: 0.015771449}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
-      transformModified: 1
     - name: SciFi:Alpha:Spine1
+      parentName: 
       position: {x: -0.0000000030212612, y: 0.1625402, z: -0.0016560534}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:Spine2
+      parentName: 
       position: {x: -0.0000000040124064, y: 0.1363964, z: -0.01292304}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999976, y: 0.99999976, z: 0.9999998}
-      transformModified: 1
     - name: SciFi:Alpha:LeftShoulder
+      parentName: 
       position: {x: -0.061442256, y: 0.10187017, z: -0.037932463}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
-      transformModified: 1
     - name: SciFi:Alpha:LeftArm
+      parentName: 
       position: {x: -0.12319099, y: -0.011129765, z: -0.01793463}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftForeArm
+      parentName: 
       position: {x: -0.27686998, y: 0.000008486238, z: 0.0000035849553}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHand
+      parentName: 
       position: {x: -0.2787378, y: -0.0000060033435, z: -0.0000002516495}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 0.99999964, z: 0.9999999}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandIndex1
+      parentName: 
       position: {x: -0.10394534, y: 0.0061476114, z: 0.027054995}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandIndex2
+      parentName: 
       position: {x: -0.055492923, y: 0.000000022038153, z: 0.000000008413707}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandIndex3
+      parentName: 
       position: {x: -0.033911176, y: -0.000000048641084, z: -0.000000052796466}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999999, y: 0.99999976, z: 0.99999976}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandIndex4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandIndex5
+      parentName: 
       position: {x: -0.025000002, y: 0.00000002317438, z: 0.0000000046874615}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandMiddle1
+      parentName: 
       position: {x: -0.10463906, y: 0.006147579, z: 0.004297878}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandMiddle2
+      parentName: 
       position: {x: -0.057920936, y: 0.00000006322933, z: 0.00000008858631}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandMiddle3
+      parentName: 
       position: {x: -0.037131727, y: 0.0000000025366427, z: 0.000000024140705}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 0.9999999, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandMiddle4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandMiddle5
+      parentName: 
       position: {x: -0.022999987, y: -0.000000050217835, z: -0.000000045642675}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandPinky1
+      parentName: 
       position: {x: -0.10012992, y: -0.0007834751, z: -0.039671406}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandPinky2
+      parentName: 
       position: {x: -0.036762536, y: -0.000000023311221, z: -0.000000025024605}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandPinky3
+      parentName: 
       position: {x: -0.028113445, y: 0.00000006107451, z: 0.000000089783285}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 0.9999998, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandPinky4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandPinky5
+      parentName: 
       position: {x: -0.02900001, y: -0.0000000042011297, z: -0.000000021295294}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandRing1
+      parentName: 
       position: {x: -0.1032516, y: 0.003211289, z: -0.01875542}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandRing2
+      parentName: 
       position: {x: -0.05445237, y: 0.00000006869393, z: 0.00000011272762}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandRing3
+      parentName: 
       position: {x: -0.037131708, y: -0.000000039024517, z: -0.00000007289189}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000001, z: 0.99999994}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandRing4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandRing5
+      parentName: 
       position: {x: -0.02000001, y: 0.00000006577207, z: 0.00000005972128}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandThumb1
+      parentName: 
       position: {x: -0.0237851, y: -0.010029028, z: 0.026209323}
       rotation: {x: -0.04343866, y: 0.0281321, z: -0.04149741, w: 0.99779737}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandThumb2
+      parentName: 
       position: {x: -0.03362373, y: -0.01002893, z: 0.028397826}
       rotation: {x: -0.02453161, y: 0.08199499, z: -0.00008898158, w: 0.99633074}
       scale: {x: 1, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandThumb3
+      parentName: 
       position: {x: -0.045017924, y: -0.013445038, z: 0.021782612}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandThumb4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:LeftHandThumb5
+      parentName: 
       position: {x: -0.026, y: -0.009999962, z: 0.010000052}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 0.99999994, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:Neck
+      parentName: 
       position: {x: 0.000000010624381, y: 0.13877448, z: -0.043541897}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:Neck1
+      parentName: 
       position: {x: 0.00000000550725, y: 0.04340033, z: 0.00926891}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
-      transformModified: 1
     - name: SciFi:Alpha:Head
+      parentName: 
       position: {x: -4.4535456e-10, y: 0.040266052, z: 0.008585211}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999976, y: 0.9999998, z: 0.99999976}
-      transformModified: 1
     - name: SciFi:Alpha:HeadTop_End
+      parentName: 
       position: {x: -5.1704583e-18, y: 0.24809258, z: 0.0012312889}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightShoulder
+      parentName: 
       position: {x: 0.06140198, y: 0.101870194, z: -0.037932463}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
-      transformModified: 1
     - name: SciFi:Alpha:RightArm
+      parentName: 
       position: {x: 0.12323135, y: -0.0111297835, z: -0.017934555}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999964, y: 0.99999964, z: 0.99999964}
-      transformModified: 1
     - name: SciFi:Alpha:RightForeArm
+      parentName: 
       position: {x: 0.27686983, y: 0.000011871682, z: 0.000003126554}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:RightHand
+      parentName: 
       position: {x: 0.27873772, y: 0.0000063683747, z: 0.00000024933868}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandIndex1
+      parentName: 
       position: {x: 0.10466502, y: 0.0048957528, z: 0.027119543}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandIndex2
+      parentName: 
       position: {x: 0.05376767, y: 0.000000020798852, z: 0.000000026614796}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandIndex3
+      parentName: 
       position: {x: 0.033854686, y: -0.000000011753279, z: -0.000000047603535}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandIndex4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandIndex5
+      parentName: 
       position: {x: 0.026000017, y: 0.000000017273974, z: -0.000000028122571}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 0.9999999, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandMiddle1
+      parentName: 
       position: {x: 0.10759599, y: 0.0048957574, z: 0.0042779283}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandMiddle2
+      parentName: 
       position: {x: 0.05616766, y: -0.000000032452938, z: -0.00000001175874}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandMiddle3
+      parentName: 
       position: {x: 0.03736356, y: 0.000000009527223, z: -0.00000005536661}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandMiddle4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandMiddle5
+      parentName: 
       position: {x: 0.022999968, y: 0.000000047031957, z: 0.000000056362143}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandPinky1
+      parentName: 
       position: {x: 0.09971456, y: -0.0011914852, z: -0.039540086}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandPinky2
+      parentName: 
       position: {x: 0.036527578, y: 0.00000003884894, z: 0.00000003244363}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999999, y: 0.9999997, z: 0.9999998}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandPinky3
+      parentName: 
       position: {x: 0.027820345, y: -0.000000006622569, z: -0.000000038120316}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 1.0000001, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandPinky4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandPinky5
+      parentName: 
       position: {x: 0.028999995, y: 0.00000003119885, z: -0.000000010083765}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandRing1
+      parentName: 
       position: {x: 0.104702115, y: 0.0038787, z: -0.019362805}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999994, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandRing2
+      parentName: 
       position: {x: 0.054012764, y: -0.000000011427106, z: -0.000000049690065}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999999, y: 0.99999976, z: 0.9999999}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandRing3
+      parentName: 
       position: {x: 0.033915948, y: -0.000000008483396, z: -0.0000000029719562}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.9999998, y: 1.0000002, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandRing4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandRing5
+      parentName: 
       position: {x: 0.022000002, y: 0.000000045446303, z: -0.00000000145607}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1.0000001, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandThumb1
+      parentName: 
       position: {x: 0.025177643, y: -0.009366673, z: 0.025136651}
       rotation: {x: -0.043864354, y: -0.01902285, z: 0.04128459, w: 0.99800277}
       scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandThumb2
+      parentName: 
       position: {x: 0.032637857, y: -0.010869665, z: 0.029668793}
       rotation: {x: -0.028151697, y: -0.09899118, z: -0.0052981614, w: 0.9946759}
       scale: {x: 1, y: 1.0000002, z: 1.0000001}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandThumb3
+      parentName: 
       position: {x: 0.044165272, y: -0.013702639, z: 0.021350197}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandThumb4
+      parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
     - name: SciFi:Alpha:RightHandThumb5
+      parentName: 
       position: {x: 0.025999997, y: -0.009999966, z: 0.010000029}
       rotation: {x: 0, y: -0, z: -0, w: 0.99999994}
       scale: {x: 0.99999976, y: 0.9999996, z: 0.99999976}
-      transformModified: 1
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -1377,7 +1388,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
   humanoidOversampling: 1

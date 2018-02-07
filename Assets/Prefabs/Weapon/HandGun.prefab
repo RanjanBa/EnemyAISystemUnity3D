@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4782919705064760}
   - component: {fileID: 33298881695435018}
   - component: {fileID: 23602810963261960}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Gun_trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4768178286768162}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: LeftHandPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4461743899915908}
   - component: {fileID: 33050089243291690}
   - component: {fileID: 23944771307030604}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,8 +70,23 @@ GameObject:
   - component: {fileID: 4691944735305830}
   - component: {fileID: 33814269528453620}
   - component: {fileID: 23332033791012472}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Cube_005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1535364750305356
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4886512800774412}
+  m_Layer: 0
+  m_Name: RightHandPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +102,7 @@ GameObject:
   - component: {fileID: 4962140526274808}
   - component: {fileID: 33809072766765338}
   - component: {fileID: 23121170249960354}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +117,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4358237480738414}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GunBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +134,7 @@ GameObject:
   - component: {fileID: 4818904462845582}
   - component: {fileID: 82788443599339940}
   - component: {fileID: 114045550381344462}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: HandGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,6 +167,7 @@ Transform:
   - {fileID: 4691944735305830}
   - {fileID: 4782919705064760}
   - {fileID: 4358237480738414}
+  - {fileID: 4886512800774412}
   - {fileID: 4768178286768162}
   m_Father: {fileID: 4818904462845582}
   m_RootOrder: 1
@@ -180,7 +196,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4461743899915908}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 83.009, y: -71.818, z: 108.57201}
 --- !u!4 &4782919705064760
 Transform:
@@ -201,8 +217,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1926057287476928}
-  m_LocalRotation: {x: 0.000000046601365, y: -0.00000013644994, z: 0.00000010430915,
-    w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -210,6 +225,19 @@ Transform:
   - {fileID: 4461743899915908}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4886512800774412
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1535364750305356}
+  m_LocalRotation: {x: -0.043317832, y: -0.6921945, z: 0.7193797, w: 0.03851183}
+  m_LocalPosition: {x: 0.1272, y: 0.03900002, z: -0.11160002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4461743899915908}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4962140526274808
 Transform:
@@ -233,6 +261,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -248,6 +277,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -265,6 +295,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -280,6 +311,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -297,6 +329,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -312,6 +345,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -329,6 +363,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -344,6 +379,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -474,14 +510,13 @@ MonoBehaviour:
   m_GunFireRate: 0.1
   m_BulletDamage: 10
   m_FiringAccuracy: 0.1
-  m_GunBarrelPos: {fileID: 4358237480738414}
-  m_FireClip: {fileID: 8300000, guid: c8eec84a058ab984fa1f867c8e90bf1a, type: 3}
-  m_OutOfBulletClip: {fileID: 8300000, guid: 65eb647f94fcad349a75b0f077127f61, type: 3}
-  m_typeOfGun: 0
-  m_CurrentBulletRound: 0
-  m_MaggazineTotalBullet: 0
-  m_OpponentCharacterTag: []
-  m_BulletHittingLayerMask:
-    serializedVersion: 2
-    m_Bits: 8448
+  m_TypeOfGun: 0
   m_LeftHandPosition: {fileID: 4768178286768162}
+  m_RightHandPosition: {fileID: 4886512800774412}
+  m_MaggazineTotalBullet: 30
+  m_fireClip: {fileID: 8300000, guid: c8eec84a058ab984fa1f867c8e90bf1a, type: 3}
+  m_outOfBulletClip: {fileID: 8300000, guid: 65eb647f94fcad349a75b0f077127f61, type: 3}
+  m_bulletHittingLayerMask:
+    serializedVersion: 2
+    m_Bits: 9984
+  m_gunBarrelPos: {fileID: 4358237480738414}

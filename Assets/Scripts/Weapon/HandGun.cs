@@ -1,16 +1,14 @@
 ﻿using UnityEngine;
-using gunClass_namespace;
+using GunClass_namespace;
 
 [RequireComponent(typeof(AudioSource))]
 public class HandGun : GunClass
 {
-    public Transform m_LeftHandPosition;
-
     private void Start()
     {
         Initialize();
         m_MaggazineTotalBullet = 12;
-        m_typeOfGun = TypeOfGun.OneHandedGun;
+        m_TypeOfGun = TypeOfGun.OneHandedGun;
     }
 
     protected override void Initialize()

@@ -2,6 +2,7 @@
 
 public abstract class CharacterManager : MonoBehaviour
 {
+    [Header("Character Manager Variables")]
     #region Customizable Public Variables
     [Range(0, 300)]
     public int m_Health = 100;
@@ -16,18 +17,15 @@ public abstract class CharacterManager : MonoBehaviour
     //[HideInInspector]
     public bool m_isInCover;
     //[HideInInspector]
-    public bool m_isInHighCover;
-    //[HideInInspector]
     public float m_charHeight;
     //[HideInInspector]
     public float m_charRadius;
     //[HideInInspector]
     public CharacterType m_CharType;
-    [HideInInspector]
-    public Animator m_animator;
     #endregion HideInInspector Variables
 
     #region Protected Variables
+    protected Animator m_animator;
     protected SceneCharactersManager m_sceneCharactersManager;
     protected bool m_isGrounded;
     protected CharacterController m_charController;

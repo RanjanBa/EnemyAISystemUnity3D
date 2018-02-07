@@ -20,9 +20,14 @@ public class AIBoxingState : IAIStateManager
         m_sqrPunchDist = sqrPunchDist;
     }
 
+    public void OnStateEnter()
+    {
+        Debug.Log("Enter Boxing State...");
+    }
+
     public void UpdateCurrentState()
     {
-        Debug.Log("Boxing State " + m_thresholdDistance);
+        Debug.Log("boxing threshold distance : " + m_thresholdDistance);
 
         UpdateBoxingState();
         ChangeStateConditions();
@@ -30,7 +35,7 @@ public class AIBoxingState : IAIStateManager
 
     private void UpdateBoxingState()
     {
-        m_aiBoxer.CheckEveryCharacter();
+        m_aiBoxer.CheckEveryCharacterForInVisualRange();
         m_aiBoxer.m_nearestOpponentVisibleCharacter = m_aiBoxer.FindNearestOpponentGameObjectWithType();
 
         if (m_aiBoxer.m_nearestOpponentVisibleCharacter.characterGameObject != null)
@@ -96,11 +101,6 @@ public class AIBoxingState : IAIStateManager
         throw new NotImplementedException();
     }
 
-    public void ChangeToInvestigateState()
-    {
-        throw new NotImplementedException();
-    }
-
     public void ChangeToUnwareState()
     {
         throw new NotImplementedException();
@@ -118,27 +118,31 @@ public class AIBoxingState : IAIStateManager
 
     public void ChangeToChaseState()
     {
-        m_aiBoxer.m_currentAIState = m_aiBoxer.m_chaseAIState;
-        if (m_aiBoxer.m_animator.GetLayerWeight(1) > 0.9f)
-        {
-            Debug.Log("Change to Chase state from boxing state...");
-            m_aiBoxer.StartCoroutine(m_aiBoxer.ChangeAnimationLayer(0, 1));
-        }
+        m_aiBoxer.ChangeAIState(m_aiBoxer.m_chaseAIState);
+        Debug.Log("Change to Chase state from boxing state...");
+        m_aiBoxer.StartCoroutine(m_aiBoxer.ChangeAnimationLayer(0, 1));
     }
 
     public void ChangeToSearchState()
     {
-        m_aiBoxer.m_currentAIState = m_aiBoxer.m_searchAIState;
         m_aiBoxer.StartCoroutine(m_aiBoxer.ChangeAnimationLayer(0, 1));
 
         m_aiBoxer.m_mainDestinationPoint = m_trackOpponentPosition;
-        m_aiBoxer.m_offsetPosition = m_aiBoxer.m_mainDestinationPoint;
+        m_aiBoxer.m_searchAIState.m_offsetPosition = m_aiBoxer.m_mainDestinationPoint;
         m_aiBoxer.m_navMeshPath = m_aiBoxer.CalculateNavmeshPath(m_aiBoxer.m_mainDestinationPoint);
-        m_aiBoxer.m_invetigate_searchDirection = m_aiBoxer.m_mainDestinationPoint - m_aiBoxer.transform.position;
-        if (Mathf.Abs(Vector3.SqrMagnitude(m_aiBoxer.m_invetigate_searchDirection)) <= 0.1f)
+        m_aiBoxer.m_searchAIState.m_invetigate_searchDirection = m_aiBoxer.m_mainDestinationPoint - m_aiBoxer.transform.position;
+        if (Mathf.Abs(Vector3.SqrMagnitude(m_aiBoxer.m_searchAIState.m_invetigate_searchDirection)) <= 0.1f)
         {
-            m_aiBoxer.m_invetigate_searchDirection = m_aiBoxer.transform.forward;
+            m_aiBoxer.m_searchAIState.m_invetigate_searchDirection = m_aiBoxer.transform.forward;
         }
-        m_aiBoxer.m_invetigate_searchDirection.y = 0f;
+
+        //m_aiBoxer.m_searchAIState.m_invetigate_searchDirection.y = 0f;
+
+        m_aiBoxer.ChangeAIState(m_aiBoxer.m_searchAIState);
+    }
+
+    public void OnStateExit()
+    {
+        Debug.Log("Exit Boxing State...");
     }
 }

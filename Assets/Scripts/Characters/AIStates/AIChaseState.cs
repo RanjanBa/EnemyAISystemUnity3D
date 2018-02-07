@@ -6,6 +6,7 @@ public class AIChaseState<T> : IAIStateManager where T : AIManager
     private T m_aiGunnerOrCombat;
     private float m_sqrOfAttackingRange;
 
+    // For Calculating navmeshPath after some frames
     private int m_frameCount = 0;
     private int m_frameForCalculatingNavmesh = 30;
 
@@ -15,9 +16,15 @@ public class AIChaseState<T> : IAIStateManager where T : AIManager
         m_sqrOfAttackingRange = sqrRange;
     }
 
+    public void OnStateEnter()
+    {
+        Debug.Log("Enter Chase state...");
+        m_aiGunnerOrCombat.m_currentAnimationState = AnimationState.RunningAnimation;
+    }
+
     public void UpdateCurrentState()
     {
-        Debug.Log("Chase State " + m_aiGunnerOrCombat.m_canMove);
+        Debug.Log("Chase State");
         m_frameCount++;
         UpdateChaseState();
         ChangeStateConditions();
@@ -25,9 +32,7 @@ public class AIChaseState<T> : IAIStateManager where T : AIManager
 
     private void UpdateChaseState()
     {
-        m_aiGunnerOrCombat.m_currentAnimationState = AnimationState.RunningAnimation;
-
-        m_aiGunnerOrCombat.CheckEveryCharacter();
+        m_aiGunnerOrCombat.CheckEveryCharacterForInVisualRange();
         m_aiGunnerOrCombat.m_nearestOpponentVisibleCharacter = m_aiGunnerOrCombat.FindNearestOpponentGameObjectWithType();
 
         if (m_aiGunnerOrCombat.m_nearestOpponentVisibleCharacter.characterGameObject != null)
@@ -40,6 +45,7 @@ public class AIChaseState<T> : IAIStateManager where T : AIManager
             m_aiGunnerOrCombat.m_navMeshPath = m_aiGunnerOrCombat.CalculateNavmeshPath(m_aiGunnerOrCombat.m_mainDestinationPoint);
             m_frameCount = 0;
         }
+
         m_aiGunnerOrCombat.FollowAlongNavMeshPath(m_aiGunnerOrCombat.m_navMeshPath, Vector3.zero);
     }
 
@@ -60,6 +66,10 @@ public class AIChaseState<T> : IAIStateManager where T : AIManager
                 return;
             }
         }
+        else
+        {
+            ChangeToGunFireState();
+        }
     }
 
     public void ChangeToChaseState()
@@ -72,11 +82,6 @@ public class AIChaseState<T> : IAIStateManager where T : AIManager
         throw new System.NotImplementedException();
     }
 
-    public void ChangeToInvestigateState()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public void ChangeToPatrolState()
     {
         throw new System.NotImplementedException();
@@ -84,50 +89,36 @@ public class AIChaseState<T> : IAIStateManager where T : AIManager
 
     public void ChangeToCoverState()
     {
-        if (m_aiGunnerOrCombat.CanFindBestCoverPosition(ref m_aiGunnerOrCombat.m_coverPositionScript))
-        {
-            m_aiGunnerOrCombat.m_coverPositionScript.m_isOccupied = true;
-            m_aiGunnerOrCombat.m_mainDestinationPoint = m_aiGunnerOrCombat.m_coverPositionScript.transform.position;
-            m_aiGunnerOrCombat.m_navMeshPath = m_aiGunnerOrCombat.CalculateNavmeshPath(m_aiGunnerOrCombat.m_mainDestinationPoint);
-            Debug.Log("I can find the cover Position");
-        }
-        else
-        {
-            Debug.Log("Can't find the cover Position");
-            if (m_aiGunnerOrCombat.m_CharType == CharacterType.EnemyGunner || m_aiGunnerOrCombat.m_CharType == CharacterType.PlayerGunnerCampanion)
-            {
-                ChangeToGunFireState();
-                m_aiGunnerOrCombat.m_navMeshPath.ClearCorners();
-                m_aiGunnerOrCombat.m_mainDestinationPoint = m_aiGunnerOrCombat.transform.position;
-            }
-            return;
-        }
-
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_coverAIState;
+        throw new System.NotImplementedException();
     }
 
     public void ChangeToGunFireState()
     {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_gunFireAIState;
-        m_aiGunnerOrCombat.m_isInCover = false;
-        m_aiGunnerOrCombat.m_animator.SetBool("IsCover", m_aiGunnerOrCombat.m_isInCover);
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_gunFireAIState);
     }
 
     public void ChangeToBoxingState()
     {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_boxingAIState;
         m_aiGunnerOrCombat.StartCoroutine(m_aiGunnerOrCombat.ChangeAnimationLayer(1, 0));
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_boxingAIState);
     }
 
     public void ChangeToSearchState()
     {
-        m_aiGunnerOrCombat.m_currentAIState = m_aiGunnerOrCombat.m_searchAIState;
-        m_aiGunnerOrCombat.m_offsetPosition = m_aiGunnerOrCombat.m_mainDestinationPoint;
-        m_aiGunnerOrCombat.m_invetigate_searchDirection = m_aiGunnerOrCombat.m_mainDestinationPoint - m_aiGunnerOrCombat.transform.position;
-        if (Mathf.Abs(Vector3.SqrMagnitude(m_aiGunnerOrCombat.m_invetigate_searchDirection)) <= 0.1f)
+        m_aiGunnerOrCombat.m_searchAIState.m_offsetPosition = m_aiGunnerOrCombat.m_mainDestinationPoint;
+        m_aiGunnerOrCombat.m_searchAIState.m_invetigate_searchDirection = m_aiGunnerOrCombat.m_mainDestinationPoint - m_aiGunnerOrCombat.transform.position;
+        if (Mathf.Abs(Vector3.SqrMagnitude(m_aiGunnerOrCombat.m_searchAIState.m_invetigate_searchDirection)) <= 0.1f)
         {
-            m_aiGunnerOrCombat.m_invetigate_searchDirection = m_aiGunnerOrCombat.transform.forward;
+            m_aiGunnerOrCombat.m_searchAIState.m_invetigate_searchDirection = m_aiGunnerOrCombat.transform.forward;
         }
-        m_aiGunnerOrCombat.m_invetigate_searchDirection.y = 0f;
+
+        //m_aiGunnerOrCombat.m_searchAIState.m_invetigate_searchDirection.y = 0f;
+
+        m_aiGunnerOrCombat.ChangeAIState(m_aiGunnerOrCombat.m_searchAIState);
+    }
+
+    public void OnStateExit()
+    {
+        Debug.Log("Exit Chase State...");
     }
 }

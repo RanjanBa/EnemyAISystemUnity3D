@@ -1,9 +1,10 @@
 ﻿
 public interface IAIStateManager
 {
+    void OnStateEnter();
+    void OnStateExit();
     void UpdateCurrentState();
     void ChangeToUnwareState();
-    void ChangeToInvestigateState();
     void ChangeToPatrolState();
     void ChangeToChaseState();
     void ChangeToBoxingState();

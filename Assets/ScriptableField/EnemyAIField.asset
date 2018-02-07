@@ -20,11 +20,11 @@ MonoBehaviour:
   m_MinMaxPatrolTime:
     MinValue: 10
     MaxValue: 20
-  SearchOrInvetigateRegions:
-  - -45
+  SearchRegions:
+  - 90
   - 45
-  - 135
-  - -135
+  - -45
+  - -90
   RangeOfSearchingCoverPos: 10
   ChangeCoverPositionTime:
     MinValue: 10

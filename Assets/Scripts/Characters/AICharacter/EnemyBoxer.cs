@@ -34,29 +34,25 @@ public class EnemyBoxer : AIBoxerManager
         {
             AIIndex = 0;
         }
-        else if (m_currentAIState == m_investigateAIState)
+        else if (m_currentAIState == m_patrolAIState)
         {
             AIIndex = 1;
         }
-        else if (m_currentAIState == m_patrolAIState)
+        else if (m_currentAIState == m_searchAIState)
         {
             AIIndex = 2;
         }
-        else if (m_currentAIState == m_searchAIState)
+        else if (m_currentAIState == m_chaseAIState)
         {
             AIIndex = 3;
         }
-        else if (m_currentAIState == m_chaseAIState)
+        else if (m_currentAIState == m_coverAIState)
         {
             AIIndex = 4;
         }
-        else if (m_currentAIState == m_coverAIState)
-        {
-            AIIndex = 5;
-        }
         else if (m_currentAIState == m_boxingAIState)
         {
-            AIIndex = 6;
+            AIIndex = 5;
         }
     }
 

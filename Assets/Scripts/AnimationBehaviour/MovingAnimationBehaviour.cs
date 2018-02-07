@@ -10,6 +10,8 @@ public class MovingAnimationBehaviour : StateMachineBehaviour
     [Tooltip("For moving the character")]
     public bool m_StartMovementAtEnd;
 
+    private AnimationState m_prevState;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -34,7 +36,8 @@ public class MovingAnimationBehaviour : StateMachineBehaviour
                 if (aiManager != null)
                 {
                     Debug.Log("Call begin behaviour");
-                    aiManager.m_canMove = false;
+                    m_prevState = aiManager.m_currentAnimationState;
+                    aiManager.m_currentAnimationState = AnimationState.IdleAnimation;
                 }
                 else
                 {
@@ -72,7 +75,7 @@ public class MovingAnimationBehaviour : StateMachineBehaviour
                 if (aiManager != null)
                 {
                     Debug.Log("Call end behaviour");
-                    aiManager.m_canMove = true;
+                    aiManager.m_currentAnimationState = m_prevState;
                 }
                 else
                 {

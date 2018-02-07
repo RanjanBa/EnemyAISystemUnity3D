@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
-using gunClass_namespace;
+using GunClass_namespace;
 
 [RequireComponent(typeof(AudioSource))]
 public class AssaulfRifle : GunClass
 {
-    public Transform m_LeftHandPosition;
-    public Transform m_RightHandPosition;
-
     private void Start()
     {
-        Initialize();
         m_MaggazineTotalBullet = 30;
-        m_ownerTag = transform.parent.tag;
-        m_typeOfGun = TypeOfGun.TwoHandedGun;
+        m_TypeOfGun = TypeOfGun.TwoHandedGun;
+        Initialize();
     }
 
     protected override void Initialize()

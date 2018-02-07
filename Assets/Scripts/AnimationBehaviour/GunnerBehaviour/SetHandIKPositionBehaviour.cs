@@ -28,8 +28,8 @@ public class SetHandIKPositionBehaviour : StateMachineBehaviour
     // OnStateIK is called right after Animator.OnAnimatorIK(). Code that sets up animation IK (inverse kinematics) should be implemented here.
     override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        gunClass_namespace.GunClass gunClass = animator.GetComponent<AIManager_namespace.AIGunnerManager>().m_activeGun;
-        if (gunClass.m_typeOfGun == TypeOfGun.OneHandedGun)
+        GunClass_namespace.GunClass gunClass = animator.GetComponent<AIManager_namespace.AIGunnerManager>().m_CurrentlyActiveGun;
+        if (gunClass.m_TypeOfGun == TypeOfGun.OneHandedGun)
         {
             HandGun hand_gun = gunClass.gameObject.GetComponent<HandGun>();
             foreach (UseIK item in useIK)

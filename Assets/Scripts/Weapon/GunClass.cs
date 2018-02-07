@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace gunClass_namespace
+namespace GunClass_namespace
 {
     public abstract class GunClass : MonoBehaviour
     {
@@ -8,39 +8,73 @@ namespace gunClass_namespace
         public float m_GunFireRate;
         public int m_BulletDamage;
         public float m_FiringAccuracy = 0.1f;
-        public Transform m_GunBarrelPos;
-        public AudioClip m_FireClip;
-        public AudioClip m_OutOfBulletClip;
-        public TypeOfGun m_typeOfGun;
-        public int m_CurrentBulletRound;
-        public int m_MaggazineTotalBullet = 30;
-        public string[] m_OpponentCharacterTag;
-        public LayerMask m_BulletHittingLayerMask;
+        public TypeOfGun m_TypeOfGun;
+        public Transform m_LeftHandPosition;
+        public Transform m_RightHandPosition;
+        public int M_RemainingAmmunition
+        {
+            get
+            {
+                return m_remainingAmmunition;
+            }
+        }
 
+        [SerializeField]
+        protected int m_MaggazineTotalBullet = 30;
+        [SerializeField]
+        private AudioClip m_fireClip;
+        [SerializeField]
+        private AudioClip m_outOfBulletClip;
+        [SerializeField]
+        private LayerMask m_bulletHittingLayerMask;
+        [SerializeField]
+        private Transform m_gunBarrelPos;
+
+        protected int m_remainingAmmunition;
+        protected string[] m_opponentCharacterTag;
         protected string m_ownerTag;
 
         protected AudioSource m_GunAudioSource;
 
         protected virtual void Initialize()
         {
-            m_OpponentCharacterTag = new string[2];
-            m_OpponentCharacterTag[0] = "Player";
-            m_OpponentCharacterTag[1] = "Enemy";
-            m_CurrentBulletRound = m_MaggazineTotalBullet;
+            m_opponentCharacterTag = new string[2];
+            m_opponentCharacterTag[0] = "Player";
+            m_opponentCharacterTag[1] = "Enemy";
+            m_ownerTag = transform.root.tag;
+            m_remainingAmmunition = m_MaggazineTotalBullet;
             m_GunAudioSource = GetComponent<AudioSource>();
         }
 
         public virtual void Fire(Vector3 direction)
         {
+            if (M_RemainingAmmunition <= 0)
+            {
+                m_GunAudioSource.clip = m_outOfBulletClip;
+            }
+            else if (M_RemainingAmmunition > 0)
+            {
+                m_GunAudioSource.clip = m_fireClip;
+                
+            }
+
+            m_GunAudioSource.Stop();
+            m_GunAudioSource.Play();
+            if(M_RemainingAmmunition <= 0)
+            {
+                return;
+            }
+
             direction += (Vector3)Random.insideUnitCircle * m_FiringAccuracy;
             RaycastHit hitInfo;
-            if (Physics.Raycast(m_GunBarrelPos.position, direction, out hitInfo, m_BulletHittingLayerMask))
+            if (Physics.Raycast(m_gunBarrelPos.position, direction, out hitInfo, m_bulletHittingLayerMask))
             {
-                for (int i = 0; i < m_OpponentCharacterTag.Length; i++)
+                Debug.DrawRay(m_gunBarrelPos.position, direction * hitInfo.distance, Color.red, 2f);
+                for (int i = 0; i < m_opponentCharacterTag.Length; i++)
                 {
-                    if (m_OpponentCharacterTag[i].CompareTo(m_ownerTag) != 0)
+                    if (m_opponentCharacterTag[i].CompareTo(m_ownerTag) != 0)
                     {
-                        if (hitInfo.transform.root.CompareTag(m_OpponentCharacterTag[i]))
+                        if (hitInfo.transform.root.CompareTag(m_opponentCharacterTag[i]))
                         {
                             CharacterManager charManger = hitInfo.transform.root.GetComponent<CharacterManager>();
                             if (charManger != null)
@@ -50,22 +84,23 @@ namespace gunClass_namespace
                         }
                     }
                 }
-
             }
-
-            if(m_CurrentBulletRound == 0)
+            else
             {
-                m_GunAudioSource.clip = m_OutOfBulletClip;
-            }
-            else if(m_CurrentBulletRound > 0)
-            {
-                m_GunAudioSource.clip = m_FireClip;
+                Debug.DrawRay(m_gunBarrelPos.position, direction * 100f, Color.yellow, 2f);
             }
 
-            Debug.DrawRay(m_GunBarrelPos.position, direction * 100f, Color.yellow, 2f);
-            m_CurrentBulletRound--;
-            m_GunAudioSource.Stop();
-            m_GunAudioSource.Play();
+            m_remainingAmmunition--;
+        }
+
+        public virtual void Reload()
+        {
+            m_remainingAmmunition = m_MaggazineTotalBullet;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawRay(transform.position, transform.forward * 1000f);
         }
     }
 }

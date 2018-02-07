@@ -5,6 +5,7 @@ namespace AIManager_namespace
 {
     public abstract class AIBoxerManager : AIManager, IBoxerManager
     {
+        [Header("AI Boxer Variables")]
         public AICombatField m_AIBoxerField;
 
         public GiveHitCollider[] m_GiveHitColliders;
@@ -14,14 +15,11 @@ namespace AIManager_namespace
 
         protected override void Initialized()
         {
-            base.Initialized();
-
             m_GiveHitColliders = GetComponentsInChildren<GiveHitCollider>();
 
             float sqrRange = m_AIBoxerField.AttackRange * m_AIBoxerField.AttackRange;
 
             m_unwareAIState = new AIUnwareState<AIManager>(this, sqrRange);
-            m_investigateAIState = new AIInvestigateState<AIManager>(this, sqrRange);
             m_patrolAIState = new AIPatrolState<AIManager>(this, sqrRange);
             m_chaseAIState = new AIChaseState<AIManager>(this, sqrRange);
             m_searchAIState = new AISearchState<AIManager>(this, sqrRange);
@@ -32,43 +30,8 @@ namespace AIManager_namespace
 
             m_boxingAIState = new AIBoxingState(this, m_charRadius, sqrRange, sqrKickDist, sqrPunchDist);
 
-            if (AIStates[AIIndex] == "UnwareState")
-            {
-                m_currentAIState = m_unwareAIState;
-            }
-            else if (AIStates[AIIndex] == "InvestigateState")
-            {
-                m_currentAIState = m_investigateAIState;
-            }
-            else if (AIStates[AIIndex] == "PatrolState")
-            {
-                m_currentAIState = m_patrolAIState;
-            }
-            else if (AIStates[AIIndex] == "SearchState")
-            {
-                m_currentAIState = m_searchAIState;
-            }
-            else if (AIStates[AIIndex] == "ChaseState")
-            {
-                m_currentAIState = m_chaseAIState;
-            }
-            else if (AIStates[AIIndex] == "CoverState")
-            {
-                m_currentAIState = m_coverAIState;
-            }
-            else if (AIStates[AIIndex] == "CorrespondingActionState")
-            {
-                if (m_CharType == CharacterType.EnemyGunner || m_CharType == CharacterType.PlayerGunnerCampanion)
-                {
-                    m_currentAIState = m_gunFireAIState;
-                }
-                else
-                {
-                    m_currentAIState = m_boxingAIState;
-                }
-            }
-
             DisableGiveHitCollider(HitColliderType.LeftAnkle);
+            base.Initialized();
         }
 
         public override void GiveDamage<T>(T manager, Vector3 hitPosition)

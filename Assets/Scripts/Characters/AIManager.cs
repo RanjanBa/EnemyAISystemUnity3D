@@ -5,17 +5,18 @@ using System.Collections;
 
 namespace AIManager_namespace
 {
-    [RequireComponent(typeof(CharacterController))]
     [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(CharacterController))]
     public abstract class AIManager : CharacterManager
     {
-        [HideInInspector]
+        [Header("AI Manager Varialbles")]
+        //[HideInInspector]
         public int AIIndex = 0;
         [HideInInspector]
-        public string[] AIStates = new string[7] { "UnwareState", "InvestigateState", "PatrolState", "SearchState", "ChaseState", "CoverState", "CorrespondingActionState" };
+        public string[] AIStates = new string[6] { "UnwareState", "PatrolState", "SearchState", "ChaseState", "CoverState", "CorrespondingActionState" };
         public bool DebugRayOfEyeRange = false;
 
-        #region Customizable Public Variables
+#region Customizable Public Variables
         [Tooltip("Layer mask for checking visibility of the characters in range")]
         public LayerMask m_CheckVisibilityLayerMask;
         public float m_SpeedOfCharacter = 2.8f;
@@ -28,25 +29,17 @@ namespace AIManager_namespace
         public float m_coolDownRate = 1f;
         public float m_AIVisibleTime = 3f;
         public Path m_FollowPath;
-        #endregion Customizable Public Variables
+#endregion Customizable Public Variables
 
-        #region HideInInspector Public Variables
+        public int m_deltaChangeInHealth;// { get; private set; }
+
+#region HideInInspector Public Variables
         //[HideInInspector]
         public AnimationState m_currentAnimationState;
         //[HideInInspector]
-        public float m_unwareTime = 1f;
-        //[HideInInspector]
-        public float m_patrolTime = 10f;
-        //[HideInInspector]
         public CharacterTypeOfGameObject m_nearestOpponentVisibleCharacter;
-        //[HideInInspector]
-        public int m_deltaChangeInHealth { get; private set; }
         [HideInInspector]
-        public Vector3 m_invetigate_searchDirection;
-        [HideInInspector]
-        public bool m_canMove;
-        [HideInInspector]
-        public bool m_canIHearSomething = false;        
+        public bool m_canIHearSomething = false;
         [HideInInspector]
         public NavMeshPath m_navMeshPath;
         [HideInInspector]
@@ -57,38 +50,33 @@ namespace AIManager_namespace
         public int m_currentIndexOfCalculatedNavmeshPath = 0;
         [HideInInspector]
         public int m_currentIndexOfGivenPath = 0;
-        [HideInInspector]
-        public Vector3 m_offsetPosition;
         //[HideInInspector]
         public CoverPosition m_coverPositionScript;
-        //[HideInInspector]
-        public float m_coverFireTime = 5f;
-        //[HideInInspector]
-        public float m_coverFireTimer = 0f;
         //[HideInInspector]
         public List<CharacterTypeAndTimerOfGameObject> m_charWithTypeAndTimer = new List<CharacterTypeAndTimerOfGameObject>();
         //[HideInInspector]
         public List<CharacterTypeOfGameObject> m_visibledCharWithType = new List<CharacterTypeOfGameObject>();
-        #endregion HideInInspector Public Variables
+#endregion HideInInspector Public Variables
 
-        #region Uncustomizable Public Variables
-        public IAIStateManager m_currentAIState;
+#region Uncustomizable Public Variables
         public AIUnwareState<AIManager> m_unwareAIState;
-        public AIInvestigateState<AIManager> m_investigateAIState;
         public AIPatrolState<AIManager> m_patrolAIState;
         public AIChaseState<AIManager> m_chaseAIState;
         public AISearchState<AIManager> m_searchAIState;
         public AICoverState<AIManager> m_coverAIState;
         public AIGunFireState m_gunFireAIState;
         public AIBoxingState m_boxingAIState;
-        #endregion Uncustomizable Public Variables
+#endregion Uncustomizable Public Variables
 
-        #region Private Variables
+        protected IAIStateManager m_currentAIState;
+
+#region Private Variables
         private CoverFinder m_coverFinder;
         private EyeVisualPerception m_eyeVisualPerception;
         private NavMeshAgent m_navMeshAgent;
-        #endregion Private Variables
+#endregion Private Variables
 
+#region methods
         protected override void Initialized()
         {
             base.Initialized();
@@ -106,20 +94,57 @@ namespace AIManager_namespace
             transform.position = m_mainDestinationPoint;
             m_currentDestinationPoint = m_mainDestinationPoint;
             m_navMeshPath = CalculateNavmeshPath(m_mainDestinationPoint);
-            m_offsetPosition = m_mainDestinationPoint;
-            m_unwareTime = Random.Range(m_AIField.m_MinMaxUnwareTime.MinValue, m_AIField.m_MinMaxUnwareTime.MaxValue);
-            m_patrolTime = Random.Range(m_AIField.m_MinMaxPatrolTime.MinValue, m_AIField.m_MinMaxPatrolTime.MaxValue);
+            CheckStates();
+        }
+
+        private void CheckStates()
+        {
+            if (AIStates[AIIndex] == "UnwareState")
+            {
+                m_currentAIState = m_unwareAIState;
+            }
+            else if (AIStates[AIIndex] == "PatrolState")
+            {
+                m_currentAIState = m_patrolAIState;
+            }
+            else if (AIStates[AIIndex] == "SearchState")
+            {
+                m_currentAIState = m_searchAIState;
+            }
+            else if (AIStates[AIIndex] == "ChaseState")
+            {
+                m_currentAIState = m_chaseAIState;
+            }
+            else if (AIStates[AIIndex] == "CoverState")
+            {
+                m_currentAIState = m_coverAIState;
+            }
+            else if (AIStates[AIIndex] == "CorrespondingActionState")
+            {
+                m_currentAIState = m_gunFireAIState;
+            }
+        }
+
+        public void ChangeAIState(IAIStateManager state)
+        {
+            if(m_currentAIState != null)
+            {
+                m_currentAIState.OnStateExit();
+            }
+
+            m_currentAIState = state;
+            m_currentAIState.OnStateEnter();
         }
 
         public float GetSearchInvestigateAngle(int index)
         {
-            if(index >= m_AIField.SearchOrInvetigateRegions.Length)
+            if(index >= m_AIField.SearchRegions.Length)
             {
                 Debug.LogWarning("index of search or investigate angle is out of range...");
                 index -= 1;
             }
 
-            return m_AIField.SearchOrInvetigateRegions[index];
+            return m_AIField.SearchRegions[index];
         }
 
         public void Crouch(bool isCrouch)
@@ -136,6 +161,21 @@ namespace AIManager_namespace
                 m_charController.center = new Vector3(0f, m_charController.height / 2f, 0f);
             }
             m_animator.SetBool("IsCrouch", isCrouch);
+        }
+
+        public void UpdateCoverAnimation(bool isInHighCover, bool isLeftCover)
+        {
+            if (m_isInCover)
+            {
+                Crouch(!isInHighCover);
+                m_animator.SetBool("IsLeftSide", isLeftCover);
+            }
+            m_animator.SetBool("IsCover", m_isInCover);
+        }
+
+        public void UpdateStafeLocomotion(float value)
+        {
+            m_animator.SetFloat("Strafe", value);
         }
 
         public void FollowAlongNavMeshPath(NavMeshPath navmeshPath, Vector3 rotationTowards, bool manuallyControlRotation = false)
@@ -197,11 +237,6 @@ namespace AIManager_namespace
                 speed = 1f;
             }
 
-            if(m_canMove == false)
-            {
-                speed = 0f;
-            }
-
             if (Mathf.Abs(thesholdAngle) < 30f)
             {
                 ControlMovementAnimation(speed);
@@ -231,29 +266,17 @@ namespace AIManager_namespace
 
         private void ControlMovementAnimation(float speed)
         {
-            float speed_m = m_animator.GetFloat("Speed");
-            if(speed_m > speed)
-            {
-                speed_m -= Time.deltaTime;
-            }
-            else if(speed_m < speed)
-            {
-                speed_m += Time.deltaTime;
-            }
-
-            speed_m = Mathf.Clamp01(speed_m);
-
-            m_animator.SetFloat("Speed", speed_m);
+            m_animator.SetFloat("Speed", speed, 0.5f, Time.deltaTime);
         }        
 
         public void ControlRotationAnimation(float angle)
         {
-            m_animator.SetFloat("Turn", angle);
+            m_animator.SetFloat("Turn", angle, 0.5f, Time.deltaTime);
         }
 
         public IEnumerator ChangeAnimationLayer(int increasingLayerIndex, int decreasingLayerIndex)
         {
-            m_canMove = false;
+            m_currentAnimationState = AnimationState.IdleAnimation;
 
             while (true)
             {
@@ -283,7 +306,7 @@ namespace AIManager_namespace
                 yield return null;
             }
 
-            m_canMove = true;
+            m_currentAnimationState = AnimationState.IdleAnimation;
             yield return null;
         }
 
@@ -426,7 +449,6 @@ namespace AIManager_namespace
 
         public void HearingPerception(Vector3 noisePosition, float range, string tag)
         {
-            m_canIHearSomething = false;
             Vector3 dir = noisePosition - transform.position;
             RaycastHit hitInfo;
             if (Physics.Raycast(transform.position, dir, out hitInfo, range))
@@ -457,24 +479,15 @@ namespace AIManager_namespace
                     }
 
                     if (length <= range)
-                    {                       
+                    {
                         m_canIHearSomething = true;
                         Debug.Log("I can hear you..");
                     }
                 }
             }
-
-            if (m_canIHearSomething)
-            {
-                m_offsetPosition = noisePosition;
-                if(m_currentAIState == m_investigateAIState)
-                {
-                    Debug.LogError("YOU HAVE TO IMPLEMENT...");
-                }
-            }
         }
-
-        public void CheckEveryCharacter()
+        
+        public void CheckEveryCharacterForInVisualRange()
         {
             foreach (CharacterTypeAndTimerOfGameObject item in m_charWithTypeAndTimer)
             {
@@ -538,6 +551,20 @@ namespace AIManager_namespace
             }
         }
 
+        public override void TakeDamage(int damage, DamageType damageType)
+        {
+            Debug.Log("I " + gameObject.name + "take damage by" + damageType.ToString());
+            if(damageType == DamageType.DamageByGun)
+            {
+                m_deltaChangeInHealth += damage;
+            }
+        }
+
+        public void ResetDeltaChangeInHealth()
+        {
+            m_deltaChangeInHealth = 0;
+        }
+
         private bool CheckVisibility(Vector3 dir, string tagOfGm)
         {
             float angle = Vector3.Angle(dir, transform.forward);
@@ -574,38 +601,20 @@ namespace AIManager_namespace
 
             return nextDestination;
         }
-
-        public override void TakeDamage(int damage, DamageType damageType)
-        {
-            if(damageType == DamageType.DamageByGun)
-            {
-                m_deltaChangeInHealth += damage;
-            }
-        }
-
-        public virtual void EquipWithWeapon()
-        {
-            Debug.Log("Base EquipWeapon Class...");
-        }
-
-        public virtual void UnEquipWeapon()
-        {
-            Debug.Log("Base UnEquipWeapon Class...");
-        }
-
-        public void ResetDeltaChangeInHealth()
-        {
-            m_deltaChangeInHealth = 0;
-        }
+#endregion methods
 
         protected virtual void OnDrawGizmosSelected()
         {
+            if (!Application.isPlaying)
+            {
+                return;
+            }
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(m_currentDestinationPoint, 0.25f);
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireCube(m_mainDestinationPoint, Vector3.one * 2f);
             Gizmos.color = Color.black;
-            Gizmos.DrawSphere(m_offsetPosition, 0.5f);
+            Gizmos.DrawSphere(m_searchAIState.m_offsetPosition, 0.5f);
 
             Gizmos.color = Color.red;
             if (m_navMeshPath != null)
